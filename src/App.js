@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import useMobile from './CustomHooks/useMobile';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Hotel from './Pages/Hotel';
+
+// swiper.js initialization
+import 'swiper/swiper-bundle.css';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+SwiperCore.use([Navigation, Autoplay]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const isMobile = useMobile();
+	useEffect(() => {
+		if (isMobile) {
+			Aos.init();
+		} else {
+			Aos.init({ offset: 250 });
+		}
+	}, []);
+	return (
+		<BrowserRouter basename='/hotelnadmorskileba'>
+			<Switch>
+				<Route exact path='/' component={Hotel} />
+			</Switch>
+		</BrowserRouter>
+	);
 }
 
 export default App;
