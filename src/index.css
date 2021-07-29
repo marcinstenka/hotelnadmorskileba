@@ -2,7 +2,8 @@
   1. Global
   2. Mobile
     2.1 Mobile Menu
-    2.2 
+    2.2 Hotel Page
+	2.3 Footer
 
 */
 
@@ -11,6 +12,10 @@
 /* 1. Global */
 :root {
   --white: #fff;
+  --footerBG: #020202;
+  --footerHeader: #b7b7b7;
+  --footerText: #c9c9c9;
+  --gold: #967649;
 }
 * {
   box-sizing: border-box;
@@ -51,7 +56,7 @@ img {
   width: 100%;
 }
 .container {
-  padding: 60px 0 0 0;
+  padding: 60px 0 40px 0;
 }
 .text {
   padding: 15px 15px 0 15px;
@@ -73,7 +78,7 @@ img {
 }
 .nav-logo {
   width: 66px;
-  margin: 5px;
+  margin: 5px 0 0 25px;
 }
 .navbar-mobile.active {
   background: var(--white);
@@ -187,4 +192,69 @@ img {
 .slider-text h2:last-of-type {
   background: rgba(0, 0, 0, 0.75);
   color: white;
+}
+
+/* 2.3 Footer */
+
+footer {
+  background: var(--footerBG);
+}
+footer h1 {
+  font-family: Verdana;
+  font-weight: 400;
+  color: var(--footerHeader);
+  font-size: 21px;
+}
+footer p,
+footer a {
+  color: var(--footerText);
+  transition: 0.1s color;
+}
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 0 20px;
+}
+.footer-link a {
+  margin: 5px 0 0 0;
+  font-size: 18px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 120px;
+}
+.social-icon svg {
+  font-size: 29px;
+}
+footer a:hover {
+  color: var(--gold);
+}
+.footer-line {
+  height: 3px;
+  width: 100px;
+  background: var(--gold);
+  margin: 25px 0;
+}
+.footer-link:first-of-type .footer-line {
+  width: 175px;
+}
+.footer-link:nth-of-type(2) .footer-line {
+  width: 135px;
+}
+.footer-link:nth-of-type(3) .footer-line {
+  width: 100px;
+}
+.footer-link:nth-of-type(4) .footer-line {
+  width: 185px;
+}
+.footer-copyright {
+  border-top: 3px solid var(--gold);
+}
+.footer-copyright {
+  margin: 50px 0 0 0;
+  padding: 20px 8px;
+  font-size: 14px;
+  text-align: center;
 }

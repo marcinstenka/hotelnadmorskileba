@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Navbar from './../components/Navbar/Navbar';
+import Footer from './../components/Footer/Footer';
 import useMobile from '../CustomHooks/useMobile';
 
 import HotelImage1 from '../assets/hotel1.jpg';
@@ -24,7 +25,7 @@ const Hotel = () => {
             slidesPerView={1}
             navigation
             loop
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 2500 }}
           >
             <SwiperSlide>
               <img src={HotelImage1} alt="Hotel Nadmorski Łeba" />
@@ -105,6 +106,7 @@ const Hotel = () => {
           przeżycia niezapomnianych chwil nad naszym pięknym polskim morzem.
         </p>
       </div>
+      <Footer />
     </>
   );
 };
