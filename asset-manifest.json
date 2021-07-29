@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/hotelnadmorskileba/static/css/main.c1c05d18.chunk.css",
-    "main.js": "/hotelnadmorskileba/static/js/main.e125512f.chunk.js",
-    "main.js.map": "/hotelnadmorskileba/static/js/main.e125512f.chunk.js.map",
+    "main.css": "/hotelnadmorskileba/static/css/main.085cd705.chunk.css",
+    "main.js": "/hotelnadmorskileba/static/js/main.6d0221f4.chunk.js",
+    "main.js.map": "/hotelnadmorskileba/static/js/main.6d0221f4.chunk.js.map",
     "runtime-main.js": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js",
     "runtime-main.js.map": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js.map",
     "static/css/2.67affa50.chunk.css": "/hotelnadmorskileba/static/css/2.67affa50.chunk.css",
-    "static/js/2.b2be5216.chunk.js": "/hotelnadmorskileba/static/js/2.b2be5216.chunk.js",
-    "static/js/2.b2be5216.chunk.js.map": "/hotelnadmorskileba/static/js/2.b2be5216.chunk.js.map",
+    "static/js/2.6e346f1e.chunk.js": "/hotelnadmorskileba/static/js/2.6e346f1e.chunk.js",
+    "static/js/2.6e346f1e.chunk.js.map": "/hotelnadmorskileba/static/js/2.6e346f1e.chunk.js.map",
     "index.html": "/hotelnadmorskileba/index.html",
     "static/css/2.67affa50.chunk.css.map": "/hotelnadmorskileba/static/css/2.67affa50.chunk.css.map",
-    "static/css/main.c1c05d18.chunk.css.map": "/hotelnadmorskileba/static/css/main.c1c05d18.chunk.css.map",
-    "static/js/2.b2be5216.chunk.js.LICENSE.txt": "/hotelnadmorskileba/static/js/2.b2be5216.chunk.js.LICENSE.txt",
+    "static/css/main.085cd705.chunk.css.map": "/hotelnadmorskileba/static/css/main.085cd705.chunk.css.map",
+    "static/js/2.6e346f1e.chunk.js.LICENSE.txt": "/hotelnadmorskileba/static/js/2.6e346f1e.chunk.js.LICENSE.txt",
     "static/media/hotel1.a2786ea2.jpg": "/hotelnadmorskileba/static/media/hotel1.a2786ea2.jpg",
     "static/media/hotel2.2395fe49.jpg": "/hotelnadmorskileba/static/media/hotel2.2395fe49.jpg",
     "static/media/hotel3.81c079f2.jpg": "/hotelnadmorskileba/static/media/hotel3.81c079f2.jpg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.0001f3f5.js",
     "static/css/2.67affa50.chunk.css",
-    "static/js/2.b2be5216.chunk.js",
-    "static/css/main.c1c05d18.chunk.css",
-    "static/js/main.e125512f.chunk.js"
+    "static/js/2.6e346f1e.chunk.js",
+    "static/css/main.085cd705.chunk.css",
+    "static/js/main.6d0221f4.chunk.js"
   ]
 }
