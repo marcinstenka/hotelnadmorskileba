@@ -6,29 +6,29 @@ import Hotel from './Pages/Hotel';
 
 // swiper.js initialization
 import 'swiper/swiper-bundle.css';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
+import SwiperCore, { Navigation, Autoplay, EffectFade } from 'swiper';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-SwiperCore.use([Navigation, Autoplay]);
+SwiperCore.use([Navigation, Autoplay, EffectFade]);
 
 function App() {
-	const isMobile = useMobile();
-	useEffect(() => {
-		if (isMobile) {
-			Aos.init();
-		} else {
-			Aos.init({ offset: 250 });
-		}
-	}, []);
-	return (
-		<BrowserRouter basename='/hotelnadmorskileba'>
-			<Switch>
-				<Route exact path='/' component={Hotel} />
-			</Switch>
-		</BrowserRouter>
-	);
+  const isMobile = useMobile();
+  useEffect(() => {
+    if (isMobile) {
+      Aos.init();
+    } else {
+      Aos.init({ offset: 250 });
+    }
+  }, []);
+  return (
+    <BrowserRouter basename="/hotelnadmorskileba">
+      <Switch>
+        <Route exact path="/" component={Hotel} />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;
