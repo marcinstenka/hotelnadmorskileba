@@ -17,7 +17,7 @@ const Hotel = () => {
     <>
       <Navbar isMobile={isMobile} />
       <div className="container">
-        <div className="hotel-slider">
+        <div className="slider">
           <Swiper
             effect="fade"
             fadeEffect={{ crossFade: true }}

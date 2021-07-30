@@ -34,10 +34,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+strong {
   font-weight: 500;
 }
 ul,
+ol,
 li,
 h1,
 h2,
@@ -51,6 +53,7 @@ p {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 img {
   width: 100%;
@@ -62,8 +65,6 @@ img {
   padding: 15px 15px 0 15px;
   font-weight: 300;
   font-size: 17px;
-}
-.text a {
 }
 /* 2. Mobile */
 
@@ -168,7 +169,7 @@ img {
   color: var(--white) !important;
 }
 
-.swiper-slide img {
+.slider .swiper-slide img {
   height: 65vh;
   object-fit: cover;
 }
@@ -257,4 +258,233 @@ footer a:hover {
   padding: 20px 8px;
   font-size: 14px;
   text-align: center;
+}
+
+/* 2.5 Restaurant */
+/* menu button */
+.button {
+  display: flex;
+  justify-content: center;
+}
+.restaurant-container a,
+.price-list-container a {
+  display: inline-block;
+  margin: 35px 0 0 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--footerBG);
+  border: 2px solid var(--footerBG);
+  padding: 8px 15px;
+  transition: 0.1s;
+}
+.restaurant-container a:hover,
+.price-list-container a:hover {
+  background: var(--footerBG);
+  color: var(--white);
+}
+
+/* 2.6 Spa */
+.spa-container h1 {
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+.spa-container h3 {
+  font-size: 18px;
+  margin: 15px 0 -10px 15px;
+}
+/* 2.7 Price List */
+.mobile-table {
+  display: block;
+}
+.table {
+  display: none;
+}
+.price-list-container h1 {
+  font-size: 25px;
+  text-align: center;
+  padding: 15px 10px 0 10px;
+}
+.mobile-table-item h4 {
+  text-align: center;
+  font-size: 19px;
+}
+.mobile-table-item {
+  padding: 15px;
+}
+.mobile-table-item:nth-of-type(odd) {
+  background: var(--footerBG);
+  color: var(--white);
+}
+.table-item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.table-item-grid span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.table-item-grid h5 {
+  margin: 8px 0 0 0;
+  align-self: center;
+  font-size: 15px;
+}
+.price-list-container ul {
+  padding: 15px 15px 0 30px;
+  line-height: 1.5;
+}
+.price-list-container li {
+  margin-top: 8px;
+}
+
+/* 2.8 Terms Of Reservation */
+
+.terms-container h4 {
+  font-weight: 700;
+  text-align: center;
+  padding: 25px 15px 5px 15px;
+}
+.terms-container ol {
+  padding: 0 15px 0 35px;
+  line-height: 1.5;
+}
+.terms-container li {
+  margin: 5px 0 0 0;
+}
+.terms-container a {
+  font-weight: 700;
+}
+.terms-container .text {
+  text-align: center;
+}
+
+/* 2.9 Contact */
+
+.contact-tile {
+  border-bottom: 2px solid #0f2453;
+}
+.contact-tile:last-of-type {
+  border-bottom: none;
+}
+.contact-tile h4 {
+  color: #0f2453;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 25px 0 0 0;
+}
+.contact-tile h5 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0 0 0;
+  margin: 0 0 -8px 0;
+}
+.contact-tile:nth-of-type(2) h5:last-of-type {
+  margin: -25px 0 -8px 0;
+}
+.contact-tile .text {
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
+.contact-tile a {
+  color: black;
+  transition: 0.1s;
+}
+.contact-tile a:hover {
+  color: #0f2453;
+}
+.contact-map iframe {
+  width: 100%;
+  max-width: 650px;
+  height: 300px;
+  border: 0;
+}
+
+/* 2.10 Organized Events */
+.events-section h2 {
+  text-align: center;
+  padding: 15px 0 0 0;
+  margin: 0 0 -5px 0;
+  font-size: 20px;
+}
+.events-section .text {
+  line-height: 1.5;
+}
+.event-info {
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s;
+}
+.events-section a:hover {
+  color: var(--gold);
+}
+.events-section:last-of-type {
+  margin: 40px 0 0 0;
+}
+.collapsible {
+  width: 100%;
+  border: 0;
+  margin: 5px 0 0 0;
+  padding: 20px;
+  display: block;
+  font-size: 15px;
+  background: var(--footerBG);
+  color: var(--white);
+  border-bottom: 1px solid gray;
+  font-family: Raleway, Helvetica;
+  transition: 0.3s;
+}
+.collapsible.active {
+  background: var(--white);
+  color: var(--footerBG);
+}
+.event-info .text {
+  padding: 15px;
+}
+
+/* 2.11 Page 404  */
+.page404-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page404-container a {
+  border: 2px solid var(--footerBG);
+  padding: 10px;
+  transition: 0.3s;
+}
+.page404-container a:hover {
+  border: 2px solid var(--footerBG);
+  background: var(--footerBG);
+  color: var(--white);
+}
+@media (min-width: 1000px) {
+  .mobile-table {
+    display: none;
+  }
+  .table {
+    display: block;
+  }
+  table {
+    border-right: 1px solid var(--footerBG);
+    border-bottom: 1px solid var(--footerBG);
+    border-spacing: 0;
+    margin: 0 auto;
+  }
+  table tr:first-of-type td {
+    font-weight: 700;
+  }
+  table td {
+    border-top: 1px solid var(--footerBG);
+    border-left: 1px solid var(--footerBG);
+    padding: 10px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+  }
 }
