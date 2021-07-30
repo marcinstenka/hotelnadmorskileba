@@ -25,7 +25,7 @@ const Hotel = () => {
             slidesPerView={1}
             navigation
             loop
-            autoplay={{ delay: 2500 }}
+            autoplay={{ delay: 3500 }}
           >
             <SwiperSlide>
               <img src={HotelImage1} alt="Hotel Nadmorski Łeba" />

@@ -13,7 +13,7 @@ const ForKids = () => {
     <>
       <Navbar isMobile={isMobile} />
       <div className="container ">
-        <div className="restaurant-slider">
+        <div className="slider">
           <Swiper
             effect="fade"
             fadeEffect={{ crossFade: true }}
@@ -21,7 +21,7 @@ const ForKids = () => {
             slidesPerView={1}
             navigation
             loop
-            autoplay={{ delay: 2500 }}
+            autoplay={{ delay: 3500 }}
           >
             <SwiperSlide>
               <img src={ForKidsImage1} alt="Hotel przyjazny dzieciom" />

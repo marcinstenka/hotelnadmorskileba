@@ -90,7 +90,7 @@ const Spa = () => {
           kondycję, a w niektórych przypadkach wspomaga leczenie. Wpływa
           korzystnie na schorzenia górnych dróg oddechowych.
         </p>
-        <h3>SAUNA SUCHA (FIŃSKA)</h3>
+        <h3 className="spa-header">SAUNA SUCHA (FIŃSKA)</h3>
         <p className="text">
           Seans w saunie suchej to świetny sposób na odprężenie i relaks. Wysoka
           temperatura i niska wilgotność działają oczyszczająco na organizm. Już
@@ -99,7 +99,7 @@ const Spa = () => {
           czas jednorazowego pobytu od 8 do 15 minut. Po opuszczeniu sauny
           należy pamiętać o uzupełnieniu płynów.
         </p>
-        <h3>SAUNA INFRARED</h3>
+        <h3 className="spa-header">SAUNA INFRARED</h3>
         <p className="text">
           To doskonała opcja dla osób, które z wielu przyczyn nie mogą korzystać
           z sauny suchej lub mokrej. Sauna ta oddziałuje ciepłem za pomocą

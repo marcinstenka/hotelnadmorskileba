@@ -305,6 +305,7 @@ footer a:hover {
   font-size: 25px;
   text-align: center;
   padding: 15px 10px 0 10px;
+  font-weight: 300;
 }
 .mobile-table-item h4 {
   text-align: center;
@@ -464,8 +465,106 @@ footer a:hover {
   color: var(--white);
 }
 @media (min-width: 1000px) {
+  /* 3. Desktop */
+  .container {
+    padding: 88px 0 40px 0;
+  }
+  .text {
+    font-size: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* 3.1 Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: var(--white);
+  }
+  .logo-container {
+    width: 100px;
+    margin: 0 0 0 30px;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px 0 0;
+  }
+  nav li {
+    margin: 0 15px 0 0;
+    font-size: 18px;
+  }
+  nav a:hover {
+    color: var(--gold);
+  }
+
+  /* 3.2 Hotel Page */
+
+  .slider {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .slider img {
+    height: 100% !important;
+  }
+  .slider-text {
+    left: 40px;
+    bottom: 40px;
+  }
+  .slider-text h2 {
+    padding: 10px;
+    font-size: 30px;
+  }
+  .slider-text h2:first-of-type {
+    background: rgba(255, 255, 255, 0.75);
+  }
+  .slider-text h2:last-of-type {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+  }
   .mobile-table {
     display: none;
+  }
+  .active-nav-link {
+    color: var(--gold);
+  }
+  /* 3.3 Footer */
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* 3.4 Rooms */
+  .rooms-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* 3.5 Spa */
+
+  .spa-container h1 {
+    font-size: 32px !important;
+  }
+  .spa-header {
+    max-width: 1200px;
+    margin: 25px auto -10px auto !important;
+    font-size: 23px !important;
+  }
+
+  /* 3.6 Price List */
+  .price-list-container h1 {
+    font-size: 30px;
+    padding: 25px 10px 10px 10px;
+  }
+  .price-list-container ul {
+    max-width: 900px;
+    margin: 0 auto;
   }
   .table {
     display: block;
@@ -486,5 +585,10 @@ footer a:hover {
     text-align: center;
     font-weight: 300;
     font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .text {
+    padding: 15px 0 0 0;
   }
 }
