@@ -361,40 +361,40 @@ footer a:hover {
 }
 
 /* 2.9 Contact */
-
-.contact-tile {
-  border-bottom: 2px solid #0f2453;
-}
-.contact-tile:last-of-type {
-  border-bottom: none;
+.contact-container {
+  text-align: center;
 }
 .contact-tile h4 {
-  color: #0f2453;
-  text-align: center;
-  font-weight: 700;
-  font-size: 18px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
   padding: 25px 0 0 0;
+  position: relative;
 }
-.contact-tile h5 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 16px;
+.contact-tile h4:first-of-type {
   padding: 10px 0 0 0;
-  margin: 0 0 -8px 0;
 }
-.contact-tile:nth-of-type(2) h5:last-of-type {
-  margin: -25px 0 -8px 0;
+.contact-tile h4::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 95%;
+  height: 1px;
+  background: var(--gold);
 }
+
 .contact-tile .text {
   text-align: center;
-  padding: 10px 0 30px 0;
+  padding: 10px 15px 5px 15px;
 }
 .contact-tile a {
   color: black;
   transition: 0.1s;
 }
 .contact-tile a:hover {
-  color: #0f2453;
+  color: var(--gold);
 }
 .contact-map iframe {
   width: 100%;

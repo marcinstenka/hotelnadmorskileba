@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-
+import ContactImage from '../assets/contact.jpg';
 import useMobile from '../CustomHooks/useMobile';
 const Contact = () => {
   const isMobile = useMobile();
@@ -8,6 +8,7 @@ const Contact = () => {
     <>
       <Navbar isMobile={isMobile} />
       <div className="container contact-container">
+        <img src={ContactImage} alt="Skontaktuj się z nami!" />
         <div className="contact-tiles">
           <div className="contact-tile">
             <h4>ADRES</h4>
@@ -20,15 +21,16 @@ const Contact = () => {
             </p>
           </div>
           <div className="contact-tile">
-            <h4>TELEFON, FAX, KONTAKT EMAIL</h4>
-            <h5>Kontakt telefoniczny:</h5>
+            <h4>TELEFON, FAX, EMAIL</h4>
             <p className="text">
+              Kontakt telefoniczny:
+              <br />
               <a href="tel:+48 59 866 23 55">tel. +48 59 866 23 55</a>
               <br />
               <a href="tel:+48 791 247 201">kom. +48 791 247 201</a>
-            </p>
-            <h5>Zapytania prosimy kierować na adres:</h5>
-            <p className="text">
+              <br />
+              <br />
+              Zapytania prosimy kierować na adres:
               <a href="mailto:recepcja@hotelnadmorskileba.pl">
                 recepcja@hotelnadmorskileba.pl
               </a>
