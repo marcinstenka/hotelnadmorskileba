@@ -12,8 +12,10 @@ import HotelImage4 from '../assets/hotel4.jpg';
 import HotelImage5 from '../assets/hotel5.jpg';
 import HotelImage6 from '../assets/hotel6.jpg';
 import HotelImage7 from '../assets/hotel7.jpg';
+import { useTranslation } from 'react-i18next';
 
 const Hotel = () => {
+	const { t } = useTranslation();
 	const isMobile = useMobile();
 	const [cookies, setCookie] = useCookies(['CookiesHotelNadmorskiLeba']);
 	const handleCookie = () => {
@@ -52,15 +54,15 @@ const Hotel = () => {
 						<SwiperSlide>
 							<img src={HotelImage1} alt='Hotel Nadmorski Łeba' />
 							<div className='slider-text'>
-								<h2>Witaj</h2>
-								<h2>W Hotelu Nadmorskim</h2>
+								<h2>{t('hero1')}</h2>
+								<h2>{t('hero2')}</h2>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<img src={HotelImage2} alt='Pokój Hotelu Nadmorski Łeba' />
 							<div className='slider-text'>
-								<h2>Mamy dla Ciebie</h2>
-								<h2>Przestronne pokoje</h2>
+								<h2>{t('hero3')}</h2>
+								<h2>{t('hero4')}</h2>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
@@ -69,8 +71,8 @@ const Hotel = () => {
 								alt='Restauracja Hotelu Nadmorskiego Łeba'
 							/>
 							<div className='slider-text'>
-								<h2>Restauracja</h2>
-								<h2>Czynna od 8:00 do 20:00</h2>
+								<h2>{t('hero5')}</h2>
+								<h2>{t('hero6')}</h2>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
@@ -79,8 +81,8 @@ const Hotel = () => {
 								alt='Bardzo bliska odległość do plaży z Hotelu'
 							/>
 							<div className='slider-text'>
-								<h2>Tworzymy</h2>
-								<h2>"Pakiety Specjalne"</h2>
+								<h2>{t('hero7')}</h2>
+								<h2>{t('hero8')}</h2>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
@@ -89,15 +91,15 @@ const Hotel = () => {
 								alt='Hotel Nadmorski jest przystosowany do potrzeb dzieci'
 							/>
 							<div className='slider-text'>
-								<h2>Organizujemy</h2>
-								<h2>"Animacje dla dzieci"</h2>
+								<h2>{t('hero9')}</h2>
+								<h2>{t('hero10')}</h2>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<img src={HotelImage6} alt='Hotel Nadmorski Łeba z lotu ptaka' />
 							<div className='slider-text'>
-								<h2>Zapytaj o</h2>
-								<h2>Ofertę weselną</h2>
+								<h2>{t('hero11')}</h2>
+								<h2>{t('hero12')}</h2>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>

@@ -240,6 +240,9 @@ footer a {
 	color: var(--footerText);
 	transition: 0.1s color;
 }
+footer p {
+	margin: 5px 0 0 0;
+}
 .footer-link {
 	display: flex;
 	flex-direction: column;
@@ -254,6 +257,7 @@ footer a {
 	display: flex;
 	justify-content: space-between;
 	max-width: 120px;
+	margin: 5px 0 0 0;
 }
 .social-icon svg {
 	font-size: 29px;

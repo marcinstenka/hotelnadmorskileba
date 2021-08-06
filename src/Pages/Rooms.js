@@ -76,7 +76,6 @@ const Rooms = () => {
 						</SwiperSlide>
 					</Swiper>
 				</div>
-				<h1>{t('Welcome to React')}</h1>
 				<button onClick={() => i18next.changeLanguage('pl')}>pl</button>
 				<button onClick={() => i18next.changeLanguage('en')}>en</button>
 				<button onClick={() => i18next.changeLanguage('de')}>de</button>

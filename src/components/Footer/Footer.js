@@ -5,12 +5,14 @@ import {
 	faGooglePlusSquare,
 	faTripadvisor,
 } from '@fortawesome/free-brands-svg-icons';
+import { useTranslation } from 'react-i18next';
 const Footer = () => {
+	const { t } = useTranslation();
 	return (
 		<footer>
 			<div className='footer-links'>
 				<div className='footer-link'>
-					<h1>ZNAJDZIESZ NAS:</h1>
+					<h1>{t('footer1')}</h1>
 					<div className='footer-line'></div>
 					<div className='social-icons'>
 						<div className='social-icon'>
@@ -31,11 +33,10 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className='footer-link'>
-					<h1>NASZE DANE:</h1>
+					<h1>{t('footer2')}</h1>
 					<div className='footer-line'></div>
 					<p>
-						HOTEL NADMORSKI <br />
-						UL. NADMORSKA 9 C <br />
+						HOTEL NADMORSKI <br /> UL. NADMORSKA 9 C <br />
 						84-360 ŁEBA <br />
 						<a href='tel:+48 59 866 23 55'>TEL. +48 59 866 23 55</a>
 						<br />
@@ -47,24 +48,22 @@ const Footer = () => {
 					</p>
 				</div>
 				<div className='footer-link'>
-					<h1>SPRAWDŹ:</h1>
+					<h1>{t('footer3')}</h1>
 					<div className='footer-line'></div>
-					<Link to='/cennik'>CENNIK</Link>
-					<Link to='/imprezy-zorganizowane'>IMPREZY ZORGANIZOWANE</Link>
-					<Link to='/kontakt'>KONTAKT</Link>
-					<Link to='/bezpieczny-hotel'>BEZPIECZNY HOTEL</Link>
-					<Link to='/warunki-rezerwacji'>WARUNKI REZERWACJI</Link>
-					<Link to='/polityka-prywatnosci'>POLITYKA PRYWATNOŚCI</Link>
+					<Link to='/cennik'>{t('footer4')}</Link>
+					<Link to='/imprezy-zorganizowane'>{t('footer5')}</Link>
+					<Link to='/kontakt'>{t('footer6')}</Link>
+					<Link to='/bezpieczny-hotel'>{t('footer7')}</Link>
+					<Link to='/warunki-rezerwacji'>{t('footer8')}</Link>
+					<Link to='/polityka-prywatnosci'>{t('footer9')}</Link>
 					<Link to='/cookies'>COOKIES</Link>
 				</div>
 				<div className='footer-link'>
-					<h1>CIEKAWE MIEJSCA:</h1>
+					<h1>{t('footer10')}</h1>
 					<div className='footer-line'></div>
-					<a href='https://lebapark.pl/'>ŁEBA PARK – RODZINNY PARK ROZRYWKI</a>
-					<a href='http://slowinski.parknarodowy.com/'>
-						SŁOWIŃSKI PARK NARODOWY
-					</a>
-					<a href='https://leba.eu/pl/'>MIASTO ŁEBA</a>
+					<a href='https://lebapark.pl/'>{t('footer11')}</a>
+					<a href='http://slowinski.parknarodowy.com/'>{t('footer12')}</a>
+					<a href='https://leba.eu/pl/'>{t('footer13')}</a>
 				</div>
 			</div>
 			<p className='footer-copyright'>

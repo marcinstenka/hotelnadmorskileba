@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { CookiesProvider } from 'react-cookie';
 import i18n from 'i18next';
@@ -23,15 +23,14 @@ i18n
 		backend: {
 			loadPath: 'assets/locales/{{lng}}/translation.json',
 		},
-		react: {
-			useSuspense: false,
-		},
 	});
-
+const loadingMarkup = <div className='h2'>Ładowanie...</div>;
 ReactDOM.render(
 	<React.StrictMode>
 		<CookiesProvider>
-			<App />
+			<Suspense fallback={loadingMarkup}>
+				<App />
+			</Suspense>
 		</CookiesProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
