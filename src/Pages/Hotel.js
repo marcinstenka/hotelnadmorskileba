@@ -27,7 +27,7 @@ const Hotel = () => {
 				cookiesBtn.parentElement.style.display = 'none';
 			});
 		}
-	}, []);
+	}, [cookies.CookiesHotelNadmorskiLeba]);
 
 	return (
 		<>

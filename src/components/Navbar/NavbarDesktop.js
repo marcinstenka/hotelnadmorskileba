@@ -1,6 +1,8 @@
 import Logo from './../../assets/logo.png';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 const NavbarDesktop = () => {
+	const { t } = useTranslation();
 	return (
 		<nav>
 			<div className='logo-container'>
@@ -9,37 +11,37 @@ const NavbarDesktop = () => {
 			<ul>
 				<li>
 					<NavLink to='/' exact activeClassName='active-nav-link'>
-						Hotel
+						{t('nav1')}
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to='/pokoje' exact activeClassName='active-nav-link'>
-						Pokoje
+						{t('nav2')}
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to='/restauracja' exact activeClassName='active-nav-link'>
-						Restauracja
+						{t('nav3')}
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to='/dla-dzieci' exact activeClassName='active-nav-link'>
-						Dla dzieci
+						{t('nav4')}
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to='/spa' exact activeClassName='active-nav-link'>
-						Spa
+						{t('nav5')}
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to='/cennik' exact activeClassName='active-nav-link'>
-						Cennik
+						{t('nav6')}
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to='/kontakt' exact activeClassName='active-nav-link'>
-						Kontakt
+						{t('nav7')}
 					</NavLink>
 				</li>
 			</ul>
