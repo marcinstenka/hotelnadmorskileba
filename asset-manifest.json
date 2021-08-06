@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/hotelnadmorskileba/static/css/main.085d44be.chunk.css",
-    "main.js": "/hotelnadmorskileba/static/js/main.fd9b81fd.chunk.js",
-    "main.js.map": "/hotelnadmorskileba/static/js/main.fd9b81fd.chunk.js.map",
+    "main.js": "/hotelnadmorskileba/static/js/main.41512a17.chunk.js",
+    "main.js.map": "/hotelnadmorskileba/static/js/main.41512a17.chunk.js.map",
     "runtime-main.js": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js",
     "runtime-main.js.map": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js.map",
     "static/css/2.f424a544.chunk.css": "/hotelnadmorskileba/static/css/2.f424a544.chunk.css",
-    "static/js/2.6380a08a.chunk.js": "/hotelnadmorskileba/static/js/2.6380a08a.chunk.js",
-    "static/js/2.6380a08a.chunk.js.map": "/hotelnadmorskileba/static/js/2.6380a08a.chunk.js.map",
+    "static/js/2.b842c593.chunk.js": "/hotelnadmorskileba/static/js/2.b842c593.chunk.js",
+    "static/js/2.b842c593.chunk.js.map": "/hotelnadmorskileba/static/js/2.b842c593.chunk.js.map",
     "index.html": "/hotelnadmorskileba/index.html",
     "static/css/2.f424a544.chunk.css.map": "/hotelnadmorskileba/static/css/2.f424a544.chunk.css.map",
     "static/css/main.085d44be.chunk.css.map": "/hotelnadmorskileba/static/css/main.085d44be.chunk.css.map",
-    "static/js/2.6380a08a.chunk.js.LICENSE.txt": "/hotelnadmorskileba/static/js/2.6380a08a.chunk.js.LICENSE.txt",
+    "static/js/2.b842c593.chunk.js.LICENSE.txt": "/hotelnadmorskileba/static/js/2.b842c593.chunk.js.LICENSE.txt",
     "static/media/contact.d05d57a5.jpg": "/hotelnadmorskileba/static/media/contact.d05d57a5.jpg",
     "static/media/forKids1.df3e4418.jpg": "/hotelnadmorskileba/static/media/forKids1.df3e4418.jpg",
     "static/media/forKids2.4d6a3d23.jpg": "/hotelnadmorskileba/static/media/forKids2.4d6a3d23.jpg",
     "static/media/forKids3.6790334b.jpg": "/hotelnadmorskileba/static/media/forKids3.6790334b.jpg",
+    "static/media/getFetch.cjs": "/hotelnadmorskileba/static/media/getFetch.582d29c4.cjs",
     "static/media/hotel1.a2786ea2.jpg": "/hotelnadmorskileba/static/media/hotel1.a2786ea2.jpg",
     "static/media/hotel2.2395fe49.jpg": "/hotelnadmorskileba/static/media/hotel2.2395fe49.jpg",
     "static/media/hotel3.81c079f2.jpg": "/hotelnadmorskileba/static/media/hotel3.81c079f2.jpg",
@@ -49,8 +50,8 @@
   "entrypoints": [
     "static/js/runtime-main.0001f3f5.js",
     "static/css/2.f424a544.chunk.css",
-    "static/js/2.6380a08a.chunk.js",
+    "static/js/2.b842c593.chunk.js",
     "static/css/main.085d44be.chunk.css",
-    "static/js/main.fd9b81fd.chunk.js"
+    "static/js/main.41512a17.chunk.js"
   ]
 }
