@@ -8,6 +8,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import './index.css';
 import App from './App';
+import { useTranslation } from 'react-i18next';
 
 i18n
 	.use(initReactI18next)
@@ -24,7 +25,11 @@ i18n
 			loadPath: 'assets/locales/{{lng}}/translation.json',
 		},
 	});
-const loadingMarkup = <div className='h2'>Ładowanie...</div>;
+const loadingMarkup = (
+	<div className='loadingMarkup'>
+		<h1>Ładowanie...</h1>
+	</div>
+);
 ReactDOM.render(
 	<React.StrictMode>
 		<CookiesProvider>

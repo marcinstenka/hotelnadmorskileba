@@ -95,6 +95,14 @@ img {
 .cookies button:hover {
 	color: var(--gold);
 }
+.loadingMarkup {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
 /* 2. Mobile */
 
 .navbar-mobile {
