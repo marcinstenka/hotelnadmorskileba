@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import useMobile from './CustomHooks/useMobile';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Hotel from './Pages/Hotel';
+// import Hotel from './Pages/Hotel';
 import Rooms from './Pages/Rooms';
 import Restaurant from './Pages/Restaurant';
 import ForKids from './Pages/ForKids';
@@ -20,7 +20,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 SwiperCore.use([Navigation, Autoplay, EffectFade]);
-
+const HomePage = lazy(() => import('./Pages/Hotel'));
 function App() {
 	const isMobile = useMobile();
 	useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
 	return (
 		<BrowserRouter basename='/hotelnadmorskileba'>
 			<Switch>
-				<Route exact path='/' component={Hotel} />
+				<Route exact path='/' component={HomePage} />
 				<Route exact path='/pokoje' component={Rooms} />
 				<Route exact path='/restauracja' component={Restaurant} />
 				<Route exact path='/dla-dzieci' component={ForKids} />
