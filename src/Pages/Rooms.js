@@ -11,12 +11,12 @@ import RoomsImage4 from '../assets/rooms4.jpg';
 import RoomsImage5 from '../assets/rooms5.jpg';
 import RoomsImage6 from '../assets/rooms6.jpg';
 import RoomsImage7 from '../assets/rooms7.jpg';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
 const Rooms = () => {
 	const isMobile = useMobile();
-	const { t } = useTranslation();
+	// const { t } = useTranslation();
 
 	return (
 		<>

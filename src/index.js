@@ -27,7 +27,7 @@ i18n
 	});
 const loadingMarkup = (
 	<div className='loadingMarkup'>
-		<h1>Ładowanie... </h1>
+		<h1>Ładowanie...</h1>
 	</div>
 );
 ReactDOM.render(

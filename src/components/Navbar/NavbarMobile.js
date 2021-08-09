@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import MobileMenuScript from './MobileMenuScript';
 import { useTranslation } from 'react-i18next';
+import MobileMenuScript from './MobileMenuScript';
 
 import Logo from '../../assets/logo.png';
 
 const NavbarMobile = () => {
-	const { t } = useTranslation;
+	const { t } = useTranslation();
 	return (
 		<nav className='navbar-mobile'>
 			<div className='mobile__hamburger'>
@@ -21,7 +21,7 @@ const NavbarMobile = () => {
 			<div className='mobile-menu'>
 				<ul>
 					<li>
-						<Link to='/'>{t('nav1')}</Link>
+						<Link to='/'>{t('nav6')}</Link>
 					</li>
 					<li>
 						<Link to='/pokoje'>{t('nav2')}</Link>
