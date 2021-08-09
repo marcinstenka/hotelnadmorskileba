@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next';
+import useMobile from '../CustomHooks/useMobile';
+
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import ContactImage from '../assets/contact.jpg';
-import useMobile from '../CustomHooks/useMobile';
 const Contact = () => {
 	const isMobile = useMobile();
+	const { t } = useTranslation();
 	return (
 		<>
 			<Navbar isMobile={isMobile} />
@@ -13,7 +16,7 @@ const Contact = () => {
 				</div>
 				<div className='contact-tiles'>
 					<div className='contact-tile'>
-						<h4>ADRES</h4>
+						<h4>{t('contact1')}</h4>
 						<p className='text'>
 							Hotel Nadmorski w Łebie
 							<br />
@@ -23,31 +26,31 @@ const Contact = () => {
 						</p>
 					</div>
 					<div className='contact-tile'>
-						<h4>TELEFON, FAX, EMAIL</h4>
+						<h4>{t('contact2')}, FAX, EMAIL</h4>
 						<p className='text'>
-							Kontakt telefoniczny:
+							{t('contact3')}
 							<br />
 							<a href='tel:+48 59 866 23 55'>tel. +48 59 866 23 55</a>
 							<br />
 							<a href='tel:+48 791 247 201'>kom. +48 791 247 201</a>
 							<br />
 							<br />
-							Zapytania prosimy kierować na adres:{' '}
+							{t('contact4')}{' '}
 							<a href='mailto:recepcja@hotelnadmorskileba.pl'>
 								recepcja@hotelnadmorskileba.pl
 							</a>
 						</p>
 					</div>
 					<div className='contact-tile'>
-						<h4>DANE DO PRZELEWU</h4>
+						<h4>{t('contact5')}</h4>
 						<p className='text'>
 							“OLMAR” Aleksander Becker
 							<br />
 							ul. Nadmorska 9<br />
 							84-360 Łeba
 							<br />
-							<strong>PKO BP</strong>, nr konta: 80 1020 4649 0000 7402 0128
-							6772
+							<strong>PKO BP</strong>, {t('contact6')} 80 1020 4649 0000 7402
+							0128 6772
 							<br />
 							<strong>SWIFT:</strong> BPKOPLPW
 							<br />

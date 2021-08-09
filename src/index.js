@@ -8,7 +8,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import './index.css';
 import App from './App';
-import { useTranslation } from 'react-i18next';
 
 i18n
 	.use(initReactI18next)

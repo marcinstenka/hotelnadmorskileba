@@ -11,6 +11,7 @@ import PriceList from './Pages/PriceList';
 import Contact from './Pages/Contact';
 import OrganizedEvents from './Pages/OrganizedEvents';
 import TermsOfReservation from './Pages/TermsOfReservation';
+import SafeHotel from './Pages/SafeHotel';
 import Page404 from './Pages/Page404';
 
 import 'swiper/swiper-bundle.css';
@@ -50,6 +51,7 @@ function App() {
 					path='/warunki-rezerwacji'
 					component={TermsOfReservation}
 				/>
+				<Route exact path='/bezpieczny-hotel' component={SafeHotel} />
 				<Route component={Page404} />
 			</Switch>
 		</BrowserRouter>

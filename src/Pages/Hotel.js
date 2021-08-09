@@ -36,8 +36,7 @@ const Hotel = () => {
 			<Navbar isMobile={isMobile} />
 			{!cookies.CookiesHotelNadmorskiLeba && (
 				<div className='cookies'>
-					<p>Ta strona wykorzystuje pliki cookies.</p>{' '}
-					<button onClick={handleCookie}>X</button>
+					<p>{t('cookies')}</p> <button onClick={handleCookie}>X</button>
 				</div>
 			)}
 			<div className='container'>
