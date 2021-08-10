@@ -12,6 +12,8 @@ import Contact from './Pages/Contact';
 import OrganizedEvents from './Pages/OrganizedEvents';
 import TermsOfReservation from './Pages/TermsOfReservation';
 import SafeHotel from './Pages/SafeHotel';
+import PrivacyPolicy from './Pages/PrivacyPolicy';
+import Cookies from './Pages/Cookies';
 import Page404 from './Pages/Page404';
 
 import 'swiper/swiper-bundle.css';
@@ -52,6 +54,8 @@ function App() {
 					component={TermsOfReservation}
 				/>
 				<Route exact path='/bezpieczny-hotel' component={SafeHotel} />
+				<Route exact path='/polityka-prywatnosci' component={PrivacyPolicy} />
+				<Route exact path='/cookies' component={Cookies} />
 				<Route component={Page404} />
 			</Switch>
 		</BrowserRouter>

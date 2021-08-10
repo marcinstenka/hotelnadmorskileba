@@ -487,7 +487,7 @@ footer a:hover {
 	padding: 15px;
 }
 
-/* 2.12 Safe Hotel */
+/* 2.11 Safe Hotel */
 .safe-hotel-container {
 	margin: 20px 0 0 0;
 }
@@ -518,7 +518,50 @@ footer a:hover {
 	font-weight: 300;
 	line-height: 1.5;
 }
-/* 2.11 Page 404  */
+
+/* 2.12 Privacy Policy */
+.privacy-policy-contanier {
+}
+.privacy-policy-contanier h6 {
+	font-weight: 700;
+	font-size: 19px;
+	padding: 20px 0 10px 15px;
+}
+.privacy-policy-contanier ol {
+	padding: 0 15px 0 30px;
+	line-height: 1.5;
+	font-size: 15px;
+	font-weight: 300;
+}
+.privacy-policy-contanier li {
+	margin: 0 0 8px 0;
+}
+
+/* 2.13 Cookies */
+.cookies-container {
+	margin: 20px 0 0 0;
+}
+.cookies-list,
+.cookies-browser-list {
+	padding: 0 15px 0 30px;
+	line-height: 1.5;
+	font-weight: 300;
+}
+.cookies-list {
+	font-size: 15px;
+}
+.cookies-list li {
+	margin: 0 0 8px 0;
+}
+.cookies-sublist li {
+	margin: 0 0 0 20px;
+}
+.cookies-container h6 {
+	font-size: 20px;
+	padding: 10px 0px 0 15px;
+	margin: 0 0 -10px 0;
+}
+/* 2.14 Page 404  */
 .page404-container {
 	height: 50vh;
 	display: flex;
@@ -741,15 +784,21 @@ footer a:hover {
 	}
 
 	.safe-hotel-container ul {
-		margin: 20px auto 0 auto;
+		margin: 0 auto;
 		max-width: 1200px;
 		font-size: 19px;
-		padding: 10px 15px 0 35px;
+		padding: 10px 15px 0 25px;
 		font-weight: 300;
 		line-height: 1.5;
 	}
 	.safe-hotel-container .text:first-of-type {
 		margin: 20px auto 0 auto;
+	}
+
+	/* 3.11 Privacy Policy */
+	.privacy-policy-contanier {
+		margin: 0 auto;
+		max-width: 1200px;
 	}
 }
 
