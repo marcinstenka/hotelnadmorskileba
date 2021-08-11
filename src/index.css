@@ -4,6 +4,29 @@
     2.1 Mobile Menu
     2.2 Hotel Page
 	2.3 Footer
+    2.4 Restaurant
+    2.5 Spa
+    2.6 Price List
+    2.7 Terms Of Reservation
+    2.8 Contact
+    2.9 Organized Events
+    2.10 Safe Hotel
+    2.11 Privacy Policy
+	2.12 Cookies
+	2.13 Page 404
+  3. Desktop
+	3.1 Navbar 
+    3.2 Hotel Page
+    3.3 Footer 
+    3.4 Rooms
+    3.5 Spa
+    3.6 Price List
+    3.7 Contact
+    3.8 Organized Events
+    3.9 Terms of Reservations
+	3.10 Safe Hotel
+	3.11 Privacy Policy
+	3.12 Cookies
 
 */
 
@@ -65,6 +88,43 @@ img {
   padding: 15px 15px 0 15px;
   font-weight: 300;
   font-size: 17px;
+}
+.cookies {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px;
+  background: var(--footerBG);
+  color: var(--white);
+  font-size: 12px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 9;
+}
+.cookies button {
+  margin: 0 0 0 5px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.cookies button:hover {
+  color: var(--gold);
+}
+.loadingMarkup {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 /* 2. Mobile */
 
@@ -161,6 +221,20 @@ img {
   width: 200px;
   margin: 20px 0 10px 0;
 }
+.translation-icons {
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+}
+.translation-icon {
+  width: 25px;
+  display: flex;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.translation-icon:hover {
+  transform: scale(1.1);
+}
 
 /* 2.2 Hotel Page */
 
@@ -211,6 +285,9 @@ footer a {
   color: var(--footerText);
   transition: 0.1s color;
 }
+footer p {
+  margin: 5px 0 0 0;
+}
 .footer-link {
   display: flex;
   flex-direction: column;
@@ -225,6 +302,7 @@ footer a {
   display: flex;
   justify-content: space-between;
   max-width: 120px;
+  margin: 5px 0 0 0;
 }
 .social-icon svg {
   font-size: 29px;
@@ -260,7 +338,7 @@ footer a:hover {
   text-align: center;
 }
 
-/* 2.5 Restaurant */
+/* 2.4 Restaurant */
 /* menu button */
 .button {
   display: flex;
@@ -283,7 +361,7 @@ footer a:hover {
   color: var(--white);
 }
 
-/* 2.6 Spa */
+/* 2.5 Spa */
 .spa-container h1 {
   font-weight: 300;
   font-size: 24px;
@@ -294,7 +372,7 @@ footer a:hover {
   font-size: 18px;
   margin: 15px 0 -10px 15px;
 }
-/* 2.7 Price List */
+/* 2.6 Price List */
 .mobile-table {
   display: block;
 }
@@ -340,18 +418,19 @@ footer a:hover {
   margin-top: 8px;
 }
 
-/* 2.8 Terms Of Reservation */
+/* 2.7 Terms Of Reservation */
 
 .terms-container h4 {
   font-weight: 700;
   text-align: center;
   padding: 25px 15px 5px 15px;
 }
-.terms-container ol {
+.terms-list {
   padding: 0 15px 0 35px;
   line-height: 1.5;
+  font-weight: 300;
 }
-.terms-container li {
+.terms-list li {
   margin: 5px 0 0 0;
 }
 .terms-container a {
@@ -361,7 +440,7 @@ footer a:hover {
   text-align: center;
 }
 
-/* 2.9 Contact */
+/* 2.8 Contact */
 .contact-container {
   text-align: center;
 }
@@ -404,7 +483,7 @@ footer a:hover {
   border: 0;
 }
 
-/* 2.10 Organized Events */
+/* 2.9 Organized Events */
 .events-section h2 {
   text-align: center;
   padding: 15px 0 0 0;
@@ -446,7 +525,80 @@ footer a:hover {
   padding: 15px;
 }
 
-/* 2.11 Page 404  */
+/* 2.10 Safe Hotel */
+.safe-hotel-container {
+  margin: 20px 0 0 0;
+}
+.safe-hotel-hero {
+  width: 100vw;
+  height: 230px;
+  background: #1e417b;
+}
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content h1 {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 25px;
+  padding: 10px 10px 0 10px;
+  letter-spacing: 2px;
+}
+.safe-hotel-image {
+  width: 220px;
+}
+.safe-hotel-container ul {
+  padding: 10px 15px 0 35px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* 2.11 Privacy Policy */
+
+.privacy-policy-contanier h6 {
+  font-weight: 700;
+  font-size: 19px;
+  padding: 20px 0 10px 15px;
+}
+.privacy-policy-list {
+  padding: 0 15px 0 30px;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 300;
+}
+.privacy-policy-list li {
+  margin: 0 0 8px 0;
+}
+
+/* 2.12 Cookies */
+.cookies-container {
+  margin: 20px 0 0 0;
+}
+.cookies-list,
+.cookies-browser-list {
+  padding: 0 15px 0 30px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.cookies-list {
+  font-size: 15px;
+}
+.cookies-list li {
+  margin: 0 0 8px 0;
+}
+.cookies-sublist li {
+  margin: 0 0 0 20px;
+}
+.cookies-container h6 {
+  font-size: 20px;
+  padding: 10px 0px 0 15px;
+  margin: 0 0 -10px 0;
+}
+/* 2.13 Page 404  */
 .page404-container {
   height: 50vh;
   display: flex;
@@ -466,6 +618,13 @@ footer a:hover {
 }
 @media (min-width: 1000px) {
   /* 3. Desktop */
+  /* if page's height is less than 100vh so footer could be at the bottom */
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
   .container {
     padding: 88px 0 40px 0;
   }
@@ -485,10 +644,7 @@ footer a:hover {
     width: 100%;
     background: var(--white);
   }
-  .logo-container {
-    width: 100px;
-    margin: 0 0 0 30px;
-  }
+
   nav ul {
     display: flex;
     list-style-type: none;
@@ -503,12 +659,26 @@ footer a:hover {
   nav a:hover {
     color: var(--gold);
   }
+  .logo-container {
+    width: 100px;
+    margin: 0 0 0 30px;
+    display: flex;
+    align-items: center;
+  }
+  .translation-icons {
+    margin: 0 0 0 15px;
+    width: unset;
+  }
+  .translation-icon {
+    margin: 0 0 0 4px;
+    width: 20px;
+  }
 
   /* 3.2 Hotel Page */
-
   .slider {
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 600px;
   }
   .slider img {
     height: 100% !important;
@@ -534,6 +704,7 @@ footer a:hover {
   .active-nav-link {
     color: var(--gold);
   }
+
   /* 3.3 Footer */
   .footer-links {
     display: grid;
@@ -541,10 +712,12 @@ footer a:hover {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   /* 3.4 Rooms */
   .rooms-slider {
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 600px;
   }
   /* 3.5 Spa */
 
@@ -586,9 +759,126 @@ footer a:hover {
     font-weight: 300;
     font-size: 18px;
   }
+
+  /* 3.7 Contact */
+  .contact-image {
+    position: relative;
+    height: 64vh;
+    overflow: hidden;
+  }
+  .contact-image img {
+    position: relative;
+    top: -15%;
+  }
+  .contact-tiles {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
+  .contact-tile {
+    max-width: 33%;
+  }
+  .contact-map {
+    margin: 40px 0 0 0;
+  }
+  .contact-map iframe {
+    height: 450px;
+    width: 900px;
+    max-width: unset;
+  }
+
+  /* 3.8 Organized events */
+
+  .collapsible {
+    max-width: 1200px;
+    margin: 5px auto 0 auto;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  /* 3.9 Terms of Reservations */
+  .terms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .terms-list {
+    font-size: 17px;
+  }
+
+  /* 3.10 Safe Hotel */
+  .safe-hotel-container {
+    margin: 0;
+  }
+  .safe-hotel-hero {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-content {
+    flex-direction: row;
+  }
+  .hero-content h1 {
+    font-size: 45px;
+    padding: 0;
+    position: relative;
+  }
+  .hero-content h1::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45%;
+    background: var(--white);
+    bottom: -10px;
+    left: 0;
+  }
+  .safe-hotel-image {
+    width: 320px;
+  }
+  .safe-hotel-container ul {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-size: 19px;
+    padding: 10px 15px 0 25px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .safe-hotel-container .text:first-of-type {
+    margin: 20px auto 0 auto;
+  }
+
+  /* 3.11 Privacy Policy */
+  .privacy-policy-contanier {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .privacy-policy-list {
+    font-size: 17px;
+  }
+
+  /* 3.12 Cookies*/
+  .cookies-container h6 {
+    padding: 20px 0 0 0;
+    font-size: 22px;
+  }
+  .cookies-list,
+  .cookies-browser-list {
+    font-size: 17px;
+  }
+  .cookies-list,
+  .cookies-browser-list,
+  .cookies-container h6 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
+
 @media (min-width: 1200px) {
   .text {
     padding: 15px 0 0 0;
+  }
+}
+@media (min-width: 1400px) {
+  .contact-image img {
+    top: -50%;
   }
 }

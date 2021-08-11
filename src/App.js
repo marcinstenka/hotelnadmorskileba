@@ -11,8 +11,11 @@ import PriceList from './Pages/PriceList';
 import Contact from './Pages/Contact';
 import OrganizedEvents from './Pages/OrganizedEvents';
 import TermsOfReservation from './Pages/TermsOfReservation';
+import SafeHotel from './Pages/SafeHotel';
+import PrivacyPolicy from './Pages/PrivacyPolicy';
+import Cookies from './Pages/Cookies';
 import Page404 from './Pages/Page404';
-// swiper.js initialization
+
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation, Autoplay, EffectFade } from 'swiper';
 
@@ -22,38 +25,41 @@ import 'aos/dist/aos.css';
 SwiperCore.use([Navigation, Autoplay, EffectFade]);
 
 function App() {
-  const isMobile = useMobile();
-  useEffect(() => {
-    if (isMobile) {
-      Aos.init();
-    } else {
-      Aos.init({ offset: 250 });
-    }
-  }, [isMobile]);
-  return (
-    <BrowserRouter basename="/hotelnadmorskileba">
-      <Switch>
-        <Route exact path="/" component={Hotel} />
-        <Route exact path="/pokoje" component={Rooms} />
-        <Route exact path="/restauracja" component={Restaurant} />
-        <Route exact path="/dla-dzieci" component={ForKids} />
-        <Route exact path="/spa" component={Spa} />
-        <Route exact path="/cennik" component={PriceList} />
-        <Route exact path="/kontakt" component={Contact} />
-        <Route
-          exact
-          path="/imprezy-zorganizowane"
-          component={OrganizedEvents}
-        />
-        <Route
-          exact
-          path="/warunki-rezerwacji"
-          component={TermsOfReservation}
-        />
-        <Route component={Page404} />
-      </Switch>
-    </BrowserRouter>
-  );
+	const isMobile = useMobile();
+	useEffect(() => {
+		if (isMobile) {
+			Aos.init();
+		} else {
+			Aos.init({ offset: 250 });
+		}
+	}, [isMobile]);
+	return (
+		<BrowserRouter basename='/hotelnadmorskileba'>
+			<Switch>
+				<Route exact path='/' component={Hotel} />
+				<Route exact path='/pokoje' component={Rooms} />
+				<Route exact path='/restauracja' component={Restaurant} />
+				<Route exact path='/dla-dzieci' component={ForKids} />
+				<Route exact path='/spa' component={Spa} />
+				<Route exact path='/cennik' component={PriceList} />
+				<Route exact path='/kontakt' component={Contact} />
+				<Route
+					exact
+					path='/imprezy-zorganizowane'
+					component={OrganizedEvents}
+				/>
+				<Route
+					exact
+					path='/warunki-rezerwacji'
+					component={TermsOfReservation}
+				/>
+				<Route exact path='/bezpieczny-hotel' component={SafeHotel} />
+				<Route exact path='/polityka-prywatnosci' component={PrivacyPolicy} />
+				<Route exact path='/cookies' component={Cookies} />
+				<Route component={Page404} />
+			</Switch>
+		</BrowserRouter>
+	);
 }
 
 export default App;
