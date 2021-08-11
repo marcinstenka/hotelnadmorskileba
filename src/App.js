@@ -17,12 +17,13 @@ import Cookies from './Pages/Cookies';
 import Page404 from './Pages/Page404';
 
 import 'swiper/swiper-bundle.css';
-import SwiperCore, { Navigation, Autoplay, EffectFade, Lazy } from 'swiper';
+import 'swiper/components/lazy/lazy.min.css';
+import SwiperCore, { Lazy, Navigation, Autoplay, EffectFade } from 'swiper';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-SwiperCore.use([Navigation, Autoplay, EffectFade, Lazy]);
+SwiperCore.use([Lazy, Navigation, Autoplay, EffectFade]);
 
 function App() {
   const isMobile = useMobile();

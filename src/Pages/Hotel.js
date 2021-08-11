@@ -49,16 +49,27 @@ const Hotel = () => {
             navigation
             loop
             autoplay={{ delay: 3500 }}
+            lazy={true}
           >
             <SwiperSlide>
-              <img src={HotelImage1} alt="Hotel Nadmorski Łeba" />
+              <img
+                data-src={HotelImage1}
+                alt="Hotel Nadmorski Łeba"
+                className="swiper-lazy"
+              />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               <div className="slider-text">
                 <h2>{t('hero1')}</h2>
                 <h2>{t('hero2')}</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={HotelImage2} alt="Pokój Hotelu Nadmorski Łeba" />
+              <img
+                data-src={HotelImage2}
+                alt="Pokój Hotelu Nadmorski Łeba"
+                className="swiper-lazy"
+              />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               <div className="slider-text">
                 <h2>{t('hero3')}</h2>
                 <h2>{t('hero4')}</h2>
@@ -66,9 +77,11 @@ const Hotel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src={HotelImage3}
+                data-src={HotelImage3}
                 alt="Restauracja Hotelu Nadmorskiego Łeba"
+                className="swiper-lazy"
               />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               <div className="slider-text">
                 <h2>{t('hero5')}</h2>
                 <h2>{t('hero6')}</h2>
@@ -76,9 +89,11 @@ const Hotel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src={HotelImage4}
+                data-src={HotelImage4}
                 alt="Bardzo bliska odległość do plaży z Hotelu"
+                className="swiper-lazy"
               />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               <div className="slider-text">
                 <h2>{t('hero7')}</h2>
                 <h2>{t('hero8')}</h2>
@@ -86,23 +101,35 @@ const Hotel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src={HotelImage5}
+                data-src={HotelImage5}
                 alt="Hotel Nadmorski jest przystosowany do potrzeb dzieci"
+                className="swiper-lazy"
               />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               <div className="slider-text">
                 <h2>{t('hero9')}</h2>
                 <h2>{t('hero10')}</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={HotelImage6} alt="Hotel Nadmorski Łeba z lotu ptaka" />
+              <img
+                data-src={HotelImage6}
+                alt="Hotel Nadmorski Łeba z lotu ptaka"
+                className="swiper-lazy"
+              />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               <div className="slider-text">
                 <h2>{t('hero11')}</h2>
                 <h2>{t('hero12')}</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={HotelImage7} alt="Recepcja Grand Łeba" />
+              <img
+                data-src={HotelImage7}
+                alt="Recepcja Grand Łeba"
+                className="swiper-lazy"
+              />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
             </SwiperSlide>
           </Swiper>
         </div>
