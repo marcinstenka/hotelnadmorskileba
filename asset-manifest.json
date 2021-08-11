@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hotelnadmorskileba/static/css/main.1c1d8349.chunk.css",
-    "main.js": "/hotelnadmorskileba/static/js/main.ec0fb048.chunk.js",
-    "main.js.map": "/hotelnadmorskileba/static/js/main.ec0fb048.chunk.js.map",
+    "main.js": "/hotelnadmorskileba/static/js/main.a1f35cac.chunk.js",
+    "main.js.map": "/hotelnadmorskileba/static/js/main.a1f35cac.chunk.js.map",
     "runtime-main.js": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js",
     "runtime-main.js.map": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js.map",
     "static/css/2.e429cd22.chunk.css": "/hotelnadmorskileba/static/css/2.e429cd22.chunk.css",
@@ -54,6 +54,6 @@
     "static/css/2.e429cd22.chunk.css",
     "static/js/2.ee0dd04f.chunk.js",
     "static/css/main.1c1d8349.chunk.css",
-    "static/js/main.ec0fb048.chunk.js"
+    "static/js/main.a1f35cac.chunk.js"
   ]
 }
