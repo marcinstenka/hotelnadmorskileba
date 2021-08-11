@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import useMobile from '../CustomHooks/useMobile';
 import Navbar from './../components/Navbar/Navbar';
 import Footer from './../components/Footer/Footer';
@@ -51,24 +51,21 @@ const Hotel = () => {
             autoplay={{ delay: 3500 }}
           >
             <SwiperSlide>
-              <LazyLoadImage src={HotelImage1} alt="Hotel Nadmorski Łeba" />
+              <img src={HotelImage1} alt="Hotel Nadmorski Łeba" />
               <div className="slider-text">
                 <h2>{t('hero1')}</h2>
                 <h2>{t('hero2')}</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <LazyLoadImage
-                src={HotelImage2}
-                alt="Pokój Hotelu Nadmorski Łeba"
-              />
+              <img src={HotelImage2} alt="Pokój Hotelu Nadmorski Łeba" />
               <div className="slider-text">
                 <h2>{t('hero3')}</h2>
                 <h2>{t('hero4')}</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <LazyLoadImage
+              <img
                 src={HotelImage3}
                 alt="Restauracja Hotelu Nadmorskiego Łeba"
               />
@@ -78,7 +75,7 @@ const Hotel = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <LazyLoadImage
+              <img
                 src={HotelImage4}
                 alt="Bardzo bliska odległość do plaży z Hotelu"
               />
@@ -88,7 +85,7 @@ const Hotel = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <LazyLoadImage
+              <img
                 src={HotelImage5}
                 alt="Hotel Nadmorski jest przystosowany do potrzeb dzieci"
               />
@@ -98,17 +95,14 @@ const Hotel = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <LazyLoadImage
-                src={HotelImage6}
-                alt="Hotel Nadmorski Łeba z lotu ptaka"
-              />
+              <img src={HotelImage6} alt="Hotel Nadmorski Łeba z lotu ptaka" />
               <div className="slider-text">
                 <h2>{t('hero11')}</h2>
                 <h2>{t('hero12')}</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <LazyLoadImage src={HotelImage7} alt="Recepcja Grand Łeba" />
+              <img src={HotelImage7} alt="Recepcja Grand Łeba" />
             </SwiperSlide>
           </Swiper>
         </div>
