@@ -27,7 +27,7 @@ const ForKids = () => {
               <img src={ForKidsImage1} alt="Hotel przyjazny dzieciom" />
               <div className="slider-text">
                 <h2>Hotel</h2>
-                <h2>Przyjazny dziecom</h2>
+                <h2>Przyjazny dzieciom</h2>
               </div>
             </SwiperSlide>
             <SwiperSlide>
