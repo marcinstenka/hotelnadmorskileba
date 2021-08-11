@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hotelnadmorskileba/static/css/main.1c1d8349.chunk.css",
-    "main.js": "/hotelnadmorskileba/static/js/main.3f35c0f8.chunk.js",
-    "main.js.map": "/hotelnadmorskileba/static/js/main.3f35c0f8.chunk.js.map",
+    "main.js": "/hotelnadmorskileba/static/js/main.816b9153.chunk.js",
+    "main.js.map": "/hotelnadmorskileba/static/js/main.816b9153.chunk.js.map",
     "runtime-main.js": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js",
     "runtime-main.js.map": "/hotelnadmorskileba/static/js/runtime-main.0001f3f5.js.map",
     "static/css/2.67affa50.chunk.css": "/hotelnadmorskileba/static/css/2.67affa50.chunk.css",
-    "static/js/2.af70cb3a.chunk.js": "/hotelnadmorskileba/static/js/2.af70cb3a.chunk.js",
-    "static/js/2.af70cb3a.chunk.js.map": "/hotelnadmorskileba/static/js/2.af70cb3a.chunk.js.map",
+    "static/js/2.fbf192ea.chunk.js": "/hotelnadmorskileba/static/js/2.fbf192ea.chunk.js",
+    "static/js/2.fbf192ea.chunk.js.map": "/hotelnadmorskileba/static/js/2.fbf192ea.chunk.js.map",
     "index.html": "/hotelnadmorskileba/index.html",
     "static/css/2.67affa50.chunk.css.map": "/hotelnadmorskileba/static/css/2.67affa50.chunk.css.map",
     "static/css/main.1c1d8349.chunk.css.map": "/hotelnadmorskileba/static/css/main.1c1d8349.chunk.css.map",
-    "static/js/2.af70cb3a.chunk.js.LICENSE.txt": "/hotelnadmorskileba/static/js/2.af70cb3a.chunk.js.LICENSE.txt",
+    "static/js/2.fbf192ea.chunk.js.LICENSE.txt": "/hotelnadmorskileba/static/js/2.fbf192ea.chunk.js.LICENSE.txt",
     "static/media/contact.2b66fe04.jpg": "/hotelnadmorskileba/static/media/contact.2b66fe04.jpg",
     "static/media/forKids1.55c6618a.jpg": "/hotelnadmorskileba/static/media/forKids1.55c6618a.jpg",
     "static/media/forKids2.828c905d.jpg": "/hotelnadmorskileba/static/media/forKids2.828c905d.jpg",
@@ -52,8 +52,8 @@
   "entrypoints": [
     "static/js/runtime-main.0001f3f5.js",
     "static/css/2.67affa50.chunk.css",
-    "static/js/2.af70cb3a.chunk.js",
+    "static/js/2.fbf192ea.chunk.js",
     "static/css/main.1c1d8349.chunk.css",
-    "static/js/main.3f35c0f8.chunk.js"
+    "static/js/main.816b9153.chunk.js"
   ]
 }
