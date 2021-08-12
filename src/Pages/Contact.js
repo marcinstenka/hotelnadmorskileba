@@ -3,7 +3,7 @@ import useMobile from '../CustomHooks/useMobile';
 
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import ContactImage from '../assets/contact.webp';
+import ContactImage from '../assets/contact.jpg';
 const Contact = () => {
   const isMobile = useMobile();
   const { t } = useTranslation();

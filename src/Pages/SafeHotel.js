@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import useMobile from '../CustomHooks/useMobile';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import SafeHotelIamge from '../assets/safe-hotel.webp';
+import SafeHotelIamge from '../assets/safe-hotel.jpg';
 const SafeHotel = () => {
   const isMobile = useMobile();
   const { t } = useTranslation();

@@ -5,10 +5,10 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
-import RestaurantImage1 from '../assets/restaurant1.webp';
-import RestaurantImage2 from '../assets/restaurant2.webp';
-import RestaurantImage3 from '../assets/restaurant3.webp';
-import RestaurantImage4 from '../assets/restaurant4.webp';
+import RestaurantImage1 from '../assets/restaurant1.jpg';
+import RestaurantImage2 from '../assets/restaurant2.jpg';
+import RestaurantImage3 from '../assets/restaurant3.jpg';
+import RestaurantImage4 from '../assets/restaurant4.jpg';
 import RestaurantMenu from '../assets/menu.pdf';
 const Restaurant = () => {
   const isMobile = useMobile();

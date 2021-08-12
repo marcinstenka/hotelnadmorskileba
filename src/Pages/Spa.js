@@ -5,13 +5,13 @@ import useMobile from '../CustomHooks/useMobile';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
-import SpaImage1 from '../assets/spa1.webp';
-import SpaImage2 from '../assets/spa2.webp';
-import SpaImage3 from '../assets/spa3.webp';
-import SpaImage4 from '../assets/spa4.webp';
-import SpaImage5 from '../assets/spa5.webp';
-import SpaImage6 from '../assets/spa6.webp';
-import SpaImage7 from '../assets/spa7.webp';
+import SpaImage1 from '../assets/spa1.jpg';
+import SpaImage2 from '../assets/spa2.jpg';
+import SpaImage3 from '../assets/spa3.jpg';
+import SpaImage4 from '../assets/spa4.jpg';
+import SpaImage5 from '../assets/spa5.jpg';
+import SpaImage6 from '../assets/spa6.jpg';
+import SpaImage7 from '../assets/spa7.jpg';
 const Spa = () => {
   const isMobile = useMobile();
   const { t } = useTranslation();

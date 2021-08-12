@@ -5,13 +5,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import useMobile from '../CustomHooks/useMobile';
 import Navbar from './../components/Navbar/Navbar';
 import Footer from './../components/Footer/Footer';
-import HotelImage1 from '../assets/hotel1.webp';
-import HotelImage2 from '../assets/hotel2.webp';
-import HotelImage3 from '../assets/hotel3.webp';
-import HotelImage4 from '../assets/hotel4.webp';
-import HotelImage5 from '../assets/hotel5.webp';
-import HotelImage6 from '../assets/hotel6.webp';
-import HotelImage7 from '../assets/hotel7.webp';
+import HotelImage1 from '../assets/hotel1.jpg';
+import HotelImage2 from '../assets/hotel2.jpg';
+import HotelImage3 from '../assets/hotel3.jpg';
+import HotelImage4 from '../assets/hotel4.jpg';
+import HotelImage5 from '../assets/hotel5.jpg';
+import HotelImage6 from '../assets/hotel6.jpg';
+import HotelImage7 from '../assets/hotel7.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Hotel = () => {

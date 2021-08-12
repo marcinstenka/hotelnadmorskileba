@@ -5,9 +5,9 @@ import useMobile from '../CustomHooks/useMobile';
 
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import OrganizedEventsImage1 from '../assets/organizedEvents1.webp';
-import OrganizedEventsImage2 from '../assets/organizedEvents2.webp';
-import OrganizedEventsImage3 from '../assets/organizedEvents3.webp';
+import OrganizedEventsImage1 from '../assets/organizedEvents1.jpg';
+import OrganizedEventsImage2 from '../assets/organizedEvents2.jpg';
+import OrganizedEventsImage3 from '../assets/organizedEvents3.jpg';
 const OrganizedEvents = () => {
   const isMobile = useMobile();
   const { t } = useTranslation();
