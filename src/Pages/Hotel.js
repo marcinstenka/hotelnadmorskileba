@@ -5,13 +5,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import useMobile from '../CustomHooks/useMobile';
 import Navbar from './../components/Navbar/Navbar';
 import Footer from './../components/Footer/Footer';
-import HotelImage1 from '../assets/hotel1.jpg';
-import HotelImage2 from '../assets/hotel2.jpg';
-import HotelImage3 from '../assets/hotel3.jpg';
-import HotelImage4 from '../assets/hotel4.jpg';
-import HotelImage5 from '../assets/hotel5.jpg';
-import HotelImage6 from '../assets/hotel6.jpg';
-import HotelImage7 from '../assets/hotel7.jpg';
+import HotelImage1 from '../assets/hotel1.webp';
+import HotelImage2 from '../assets/hotel2.webp';
+import HotelImage3 from '../assets/hotel3.webp';
+import HotelImage4 from '../assets/hotel4.webp';
+import HotelImage5 from '../assets/hotel5.webp';
+import HotelImage6 from '../assets/hotel6.webp';
+import HotelImage7 from '../assets/hotel7.webp';
 import { useTranslation } from 'react-i18next';
 
 const Hotel = () => {
@@ -106,28 +106,10 @@ const Hotel = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <p className="text">
-          Hotel Nadmorski w Łebie to obiekt położony niespełna 150 metrów od
-          pięknej, szerokiej bałtyckiej plaży. W ofercie znajda państwo
-          apartamenty, pokoje jedno-, dwu- oraz trzy osobowe.
-        </p>
-        <p className="text">
-          Dysponujemy własną restauracją oraz zapleczem parkingowym, z myślą o
-          najmłodszych gościach Naszego hotelu, przygotowaliśmy szereg
-          udogodnień – kids club, dodatkowe łóżeczka dla dzieci, krzesełka do
-          karmienia czy specjalnie przygotowywane menu.
-        </p>
-        <p className="text">
-          Hotel Nadmorski – obiekt nowoczesny, oferujący wysoki standard usług w
-          przystępnej cenie jest doskonałą propozycją na weekendowy wyjazd,
-          rodzinne wczasy konferencje czy kameralne przyjęcie weselne. Nasz
-          doświadczony zespół dokłada wszelkich starań, aby czas spędzony w
-          Naszym hotelu był czasem niezapomnianym.
-        </p>
-        <p className="text">
-          Zapraszamy, jesteśmy pewni iż pobyt w Naszym hotelu przyczyni się do
-          przeżycia niezapomnianych chwil nad naszym pięknym polskim morzem.
-        </p>
+        <p className="text">{t('hero13')}</p>
+        <p className="text">{t('hero14')}</p>
+        <p className="text">{t('hero15')}</p>
+        <p className="text">{t('hero16')}</p>
       </div>
       <Footer />
     </>

@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
-import ForKidsImage1 from '../assets/forKids1.jpg';
-import ForKidsImage2 from '../assets/forKids2.jpg';
-import ForKidsImage3 from '../assets/forKids3.jpg';
+import ForKidsImage1 from '../assets/forKids1.webp';
+import ForKidsImage2 from '../assets/forKids2.webp';
+import ForKidsImage3 from '../assets/forKids3.webp';
 const ForKids = () => {
   const isMobile = useMobile();
   const { t } = useTranslation();

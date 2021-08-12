@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-import Logo from './../../assets/logo.png';
+import Logo from './../../assets/logo.webp';
 import PlIcon from './../../assets/pl-icon.png';
 import GbIcon from './../../assets/gb-icon.png';
 import DeIcon from './../../assets/de-icon.png';
