@@ -268,7 +268,11 @@ img {
   background: rgba(0, 0, 0, 0.75);
   color: white;
 }
-
+.voucher {
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto -15px auto;
+}
 /* 2.3 Footer */
 
 footer {

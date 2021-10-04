@@ -12,6 +12,7 @@ import HotelImage4 from '../assets/hotel4.jpg';
 import HotelImage5 from '../assets/hotel5.jpg';
 import HotelImage6 from '../assets/hotel6.jpg';
 import HotelImage7 from '../assets/hotel7.jpg';
+import Voucher from '../assets/voucher.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Hotel = () => {
@@ -110,6 +111,9 @@ const Hotel = () => {
         <p className="text">{t('hero14')}</p>
         <p className="text">{t('hero15')}</p>
         <p className="text">{t('hero16')}</p>
+        <div className="voucher">
+          <img src={Voucher} alt="Bon turstyczny" />
+        </div>
       </div>
       <Footer />
     </>
