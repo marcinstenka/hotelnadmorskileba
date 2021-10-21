@@ -271,8 +271,9 @@ img {
 .voucher {
   width: 100%;
   max-width: 720px;
-  margin: 20px auto -15px auto;
+  margin: 20px auto 10px auto;
 }
+
 /* 2.3 Footer */
 
 footer {
