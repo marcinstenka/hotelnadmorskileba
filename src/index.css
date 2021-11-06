@@ -752,6 +752,7 @@ footer a:hover {
     border-bottom: 1px solid var(--footerBG);
     border-spacing: 0;
     margin: 0 auto;
+    min-width: 870px;
   }
   table tr:first-of-type td {
     font-weight: 700;
