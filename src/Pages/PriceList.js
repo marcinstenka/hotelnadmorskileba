@@ -356,7 +356,7 @@ const PriceList = () => {
           <li>{t('priceList-text15')}</li>
         </ul>
         <div className="button">
-          <Link to="warunki-rezerwacji">{t('priceList-text16')}</Link>
+          <Link to="warunki-rezerwacji">{t('priceList-text17')}</Link>
         </div>
       </div>
       <Footer />

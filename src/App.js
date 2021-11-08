@@ -34,7 +34,7 @@ function App() {
     }
   }, [isMobile]);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="hotelnadmorski">
       <Switch>
         <Route exact path="/" component={Hotel} />
         <Route exact path="/pokoje" component={Rooms} />
