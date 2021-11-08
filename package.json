@@ -1,7 +1,7 @@
 {
   "name": "hotelnadmorski",
   "version": "0.1.0",
-  "homepage": "https://hotelnadmorskileba.pl/",
+  "homepage": "https://marcinstenka.github.io/hotelnadmorskileba/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
