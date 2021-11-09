@@ -19,7 +19,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -33,7 +33,7 @@ const PriceList = () => {
               <h5>{t('priceList-price2')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price3')}</h5>
               <h5>
@@ -49,7 +49,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -63,7 +63,7 @@ const PriceList = () => {
               <h5>{t('priceList-price6')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price7')}</h5>
               <h5>
@@ -78,7 +78,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -92,7 +92,7 @@ const PriceList = () => {
               <h5>{t('priceList-price10')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price11')}</h5>
               <h5>
@@ -108,7 +108,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -122,7 +122,7 @@ const PriceList = () => {
               <h5>{t('priceList-price14')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price15')}</h5>
               <h5>
@@ -138,7 +138,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -152,7 +152,7 @@ const PriceList = () => {
               <h5>{t('priceList-price18')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price19')}</h5>
               <h5>
@@ -168,7 +168,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -182,7 +182,7 @@ const PriceList = () => {
               <h5>{t('priceList-price22')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price23')}</h5>
               <h5>
@@ -198,7 +198,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -212,7 +212,7 @@ const PriceList = () => {
               <h5>{t('priceList-price26')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price27')}</h5>
               <h5>
@@ -228,7 +228,7 @@ const PriceList = () => {
             <div className="table-item-grid">
               <h5>
                 <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </h5>
@@ -242,7 +242,7 @@ const PriceList = () => {
               <h5>{t('priceList-price30')}</h5>
               <h5>
                 <span>{t('priceList-season3')}</span>
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </h5>
               <h5>{t('priceList-price31')}</h5>
               <h5>
@@ -260,7 +260,7 @@ const PriceList = () => {
               <td>{t('priceList-header2')}</td>
               <td>
                 {t('priceList-season1')}
-                <br /> 23.04 - 30.04
+                <br /> 23.04 - 29.04
                 <br /> 03.05 - 28.05
                 <br /> 29.08 - 26.09
               </td>
@@ -272,7 +272,7 @@ const PriceList = () => {
               </td>
               <td>
                 {t('priceList-season3')}
-                <br /> 30.04 - 03.05 <br /> 19.06 - 02.07
+                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
               </td>
               <td>
                 {t('priceList-season4')}
