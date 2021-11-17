@@ -24,9 +24,13 @@ const PriceList = () => {
     };
     fetchData();
   }, []);
-  const test = () => {
+  const RenderPriceList = () => {
     if (!data) {
-      return <h1>Cos sie popsulo</h1>;
+      return (
+        <div className="loadingMarkup">
+          <h1>Ładowanie...</h1>
+        </div>
+      );
     } else {
       const perbb1 = data['1perbb'];
       const perhb1 = data['1perhb'];
@@ -41,10 +45,8 @@ const PriceList = () => {
       dates.midseason = dates.midseason.replace('\\r\\n', '\r\n');
       dates.midseasonplus = dates.midseasonplus.replace('\\r\\n', '\r\n');
       dates.highseason = dates.highseason.replace('\\r\\n', '\r\n');
-
       return (
         <>
-          <h1>Dziala</h1>
           <Navbar isMobile={isMobile} />
           <div className="container price-list-container">
             <h1>{t('priceList-header2')}</h1>
@@ -645,7 +647,7 @@ const PriceList = () => {
       );
     }
   };
-  return test();
+  return RenderPriceList();
 };
 
 export default PriceList;
