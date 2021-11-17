@@ -11,11 +11,12 @@ const PriceList = () => {
   const [data, setData] = useState();
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(
-        'https://hotelnadmorskileba.pl/pricelist.json'
-      );
-      console.log(result.data);
-      setData(result.data);
+      await axios
+        .get('https://hotelnadmorskileba.pl/pricelist.json')
+        .then(res => {
+          console.log(res.data);
+          setData(res.data);
+        });
     };
     fetchData();
   }, []);
