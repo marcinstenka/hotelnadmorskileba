@@ -9,6 +9,8 @@ import Footer from '../components/Footer/Footer';
 
 const PriceList = () => {
   const [data, setData] = useState();
+  const isMobile = useMobile();
+  const { t } = useTranslation();
   useEffect(() => {
     const fetchData = async () => {
       await axios
@@ -35,8 +37,6 @@ const PriceList = () => {
   dates.midseasonplus = dates.midseasonplus.replace('\\r\\n', '\r\n');
   dates.highseason = dates.highseason.replace('\\r\\n', '\r\n');
 
-  const isMobile = useMobile();
-  const { t } = useTranslation();
   return (
     <>
       <Navbar isMobile={isMobile} />
