@@ -13,35 +13,35 @@ const PriceList = () => {
   const isMobile = useMobile();
   const { t } = useTranslation();
 
-  if (!data) return <h1>Cos sie popsulo</h1>;
   useEffect(() => {
-    const fetchData = async () => {
-      await axios
-        .get('https://hotelnadmorskileba.pl/pricelist.json')
-        .then(res => {
-          console.log(res.data);
-          setData(res.data);
-        });
+    const fetchData = () => {
+      axios.get('https://hotelnadmorskileba.pl/pricelist.json').then(res => {
+        console.log(res.data);
+        setData(res.data);
+      });
     };
     fetchData();
-  }, [data]);
-  const perbb1 = data['1perbb'];
-  const perhb1 = data['1perhb'];
-  const perbb2 = data['2perbb'];
-  const perhb2 = data['2perhb'];
-  const perbb3 = data['3perbb'];
-  const perhb3 = data['3perhb'];
-  const dates = data['dates'];
-  const suitbb = data['suitbb'];
-  const suithb = data['suithb'];
-  dates.lowseason = dates.lowseason.replace('\\r\\n', '\r\n');
-  dates.midseason = dates.midseason.replace('\\r\\n', '\r\n');
-  dates.midseasonplus = dates.midseasonplus.replace('\\r\\n', '\r\n');
-  dates.highseason = dates.highseason.replace('\\r\\n', '\r\n');
+  }, []);
+  if (!data) return <h1>Cos sie popsulo</h1>;
+
+  // const perbb1 = data['1perbb'];
+  // const perhb1 = data['1perhb'];
+  // const perbb2 = data['2perbb'];
+  // const perhb2 = data['2perhb'];
+  // const perbb3 = data['3perbb'];
+  // const perhb3 = data['3perhb'];
+  // const dates = data['dates'];
+  // const suitbb = data['suitbb'];
+  // const suithb = data['suithb'];
+  // dates.lowseason = dates.lowseason.replace('\\r\\n', '\r\n');
+  // dates.midseason = dates.midseason.replace('\\r\\n', '\r\n');
+  // dates.midseasonplus = dates.midseasonplus.replace('\\r\\n', '\r\n');
+  // dates.highseason = dates.highseason.replace('\\r\\n', '\r\n');
 
   return (
     <>
-      <Navbar isMobile={isMobile} />
+      <h1>Dziala</h1>
+      {/* <Navbar isMobile={isMobile} />
       <div className="container price-list-container">
         <h1>{t('priceList-header2')}</h1>
         <div className="mobile-table">
@@ -635,7 +635,7 @@ const PriceList = () => {
         <div className="button">
           <Link to="warunki-rezerwacji">{t('priceList-text15')}</Link>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
