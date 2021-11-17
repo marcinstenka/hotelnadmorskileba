@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
 import useMobile from '../CustomHooks/useMobile';
 
 import Navbar from '../components/Navbar/Navbar';
@@ -9,9 +10,14 @@ import Footer from '../components/Footer/Footer';
 const PriceList = () => {
   const [data, setData] = useState();
   useEffect(() => {
-    fetch('https://hotelnadmorskileba.pl/pricelist.json')
-      .then(response => response.json())
-      .then(data => setData(data));
+    const fetchData = async () => {
+      const result = await axios(
+        'https://hotelnadmorskileba.pl/pricelist.json'
+      );
+      console.log(result.data);
+      setData(result.data);
+    };
+    fetchData();
   }, []);
   if (!data) return null;
   const perbb1 = data['1perbb'];
