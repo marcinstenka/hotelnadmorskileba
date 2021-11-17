@@ -14,11 +14,13 @@ const PriceList = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const fetchData = () => {
-      axios.get('https://hotelnadmorskileba.pl/pricelist.json').then(res => {
-        console.log(res.data);
-        setData(res.data);
-      });
+    const fetchData = async () => {
+      await axios
+        .get('https://hotelnadmorskileba.pl/pricelist.json')
+        .then(res => {
+          console.log(res.data);
+          setData(res.data);
+        });
     };
     fetchData();
   }, []);
