@@ -35,13 +35,13 @@ const PriceList = () => {
       const perhb2 = data['2perhb'];
       const perbb3 = data['3perbb'];
       const perhb3 = data['3perhb'];
-      const dates = data['dates'];
+      let dates = data['dates'];
       const suitbb = data['suitbb'];
       const suithb = data['suithb'];
-      dates.lowseason = dates.lowseason.replace('\\r\\n', '\r\n');
-      dates.midseason = dates.midseason.replace('\\r\\n', '\r\n');
-      dates.midseasonplus = dates.midseasonplus.replace('\\r\\n', '\r\n');
-      dates.highseason = dates.highseason.replace('\\r\\n', '\r\n');
+      dates.lowseason = dates.lowseason.replaceAll('\\r\\n', '\r\n');
+      dates.midseason = dates.midseason.replaceAll('\\r\\n', '\r\n');
+      dates.midseasonplus = dates.midseasonplus.replaceAll('\\r\\n', '\r\n');
+      dates.highseason = dates.highseason.replaceAll('\\r\\n', '\r\n');
       return (
         <>
           <Navbar isMobile={isMobile} />
