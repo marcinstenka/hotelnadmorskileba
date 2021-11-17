@@ -9,8 +9,11 @@ import Footer from '../components/Footer/Footer';
 
 const PriceList = () => {
   const [data, setData] = useState();
+
   const isMobile = useMobile();
   const { t } = useTranslation();
+
+  if (!data) return <h1>Cos sie popsulo</h1>;
   useEffect(() => {
     const fetchData = async () => {
       await axios
@@ -21,8 +24,7 @@ const PriceList = () => {
         });
     };
     fetchData();
-  }, []);
-  if (!data) return null;
+  }, [data]);
   const perbb1 = data['1perbb'];
   const perhb1 = data['1perhb'];
   const perbb2 = data['2perbb'];
