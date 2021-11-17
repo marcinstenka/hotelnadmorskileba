@@ -9,16 +9,13 @@ import Footer from '../components/Footer/Footer';
 
 const PriceList = () => {
   const [data, setData] = useState();
-
   const isMobile = useMobile();
   const { t } = useTranslation();
-
   useEffect(() => {
     const fetchData = async () => {
       await axios
         .get('https://hotelnadmorskileba.pl/pricelist.json')
         .then(res => {
-          console.log(res.data);
           setData(res.data);
         });
     };
