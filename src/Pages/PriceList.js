@@ -9,12 +9,9 @@ import Footer from '../components/Footer/Footer';
 const PriceList = () => {
   const [data, setData] = useState();
   useEffect(() => {
-    const fetchData = async () => {
-      await fetch('https://hotelnadmorskileba.pl/pricelist.json')
-        .then(response => response.json())
-        .then(data => setData(data));
-    };
-    fetchData();
+    fetch('https://hotelnadmorskileba.pl/pricelist.json')
+      .then(response => response.json())
+      .then(data => setData(data));
   }, []);
   if (!data) return null;
   const perbb1 = data['1perbb'];
