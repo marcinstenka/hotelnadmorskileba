@@ -411,7 +411,8 @@ footer a:hover {
   font-weight: 700;
 }
 .table-item-grid h5 {
-  margin: 8px 0 0 0;
+  max-width: 126px;
+  margin: 8px auto 0 auto;
   align-self: center;
   font-size: 15px;
 }
@@ -756,6 +757,7 @@ footer a:hover {
   }
   table tr:first-of-type td {
     font-weight: 700;
+    max-width: 133px;
   }
   table td {
     border-top: 1px solid var(--footerBG);

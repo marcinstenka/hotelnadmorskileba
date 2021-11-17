@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useMobile from '../CustomHooks/useMobile';
@@ -7,11 +7,30 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
 const PriceList = () => {
+  const [data, setData] = useState();
   useEffect(() => {
-    fetch('https://hotelnadmorskileba.pl/pricelist.json')
-      .then(response => response.json())
-      .then(data => console.log(data));
-  });
+    const fetchData = async () => {
+      await fetch('https://hotelnadmorskileba.pl/pricelist.json')
+        .then(response => response.json())
+        .then(data => setData(data));
+    };
+    fetchData();
+  }, []);
+  if (!data) return null;
+  const perbb1 = data['1perbb'];
+  const perhb1 = data['1perhb'];
+  const perbb2 = data['2perbb'];
+  const perhb2 = data['2perhb'];
+  const perbb3 = data['3perbb'];
+  const perhb3 = data['3perhb'];
+  const dates = data['dates'];
+  const suitbb = data['suitbb'];
+  const suithb = data['suithb'];
+  dates.lowseason = dates.lowseason.replace('\\r\\n', '\r\n');
+  dates.midseason = dates.midseason.replace('\\r\\n', '\r\n');
+  dates.midseasonplus = dates.midseasonplus.replace('\\r\\n', '\r\n');
+  dates.highseason = dates.highseason.replace('\\r\\n', '\r\n');
+
   const isMobile = useMobile();
   const { t } = useTranslation();
   return (
@@ -24,239 +43,360 @@ const PriceList = () => {
             <h4>{t('priceList-roomType1')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price1')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price2')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {perbb1.lowseason !== '-'
+                  ? perbb1.lowseason + ' ' + t('priceList-currency')
+                  : perbb1.lowseason}
               </h5>
-              <h5>{t('priceList-price3')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price4')}</h5>
+              <h5>
+                {perbb1.midseason !== '-'
+                  ? perbb1.midseason + ' ' + t('priceList-currency')
+                  : perbb1.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {perbb1.midseasonplus !== '-'
+                  ? perbb1.midseasonplus + ' ' + t('priceList-currency')
+                  : perbb1.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {perbb1.highseason !== '-'
+                  ? perbb1.highseason + ' ' + t('priceList-currency')
+                  : perbb1.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType2')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price5')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price6')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {perhb1.lowseason !== '-'
+                  ? perhb1.lowseason + ' ' + t('priceList-currency')
+                  : perhb1.lowseason}
               </h5>
-              <h5>{t('priceList-price7')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span> <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                <span>Sezon średni</span>
+                <br />
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price8')}</h5>
+              <h5>
+                {perhb1.midseason !== '-'
+                  ? perhb1.midseason + ' ' + t('priceList-currency')
+                  : perhb1.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {perbb1.midseasonplus !== '-'
+                  ? perhb1.midseasonplus + ' ' + t('priceList-currency')
+                  : perhb1.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {perhb1.highseason !== '-'
+                  ? perhb1.highseason + ' ' + t('priceList-currency')
+                  : perhb1.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType3')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price9')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price10')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {perbb2.lowseason !== '-'
+                  ? perbb2.lowseason + ' ' + t('priceList-currency')
+                  : perbb2.lowseason}
               </h5>
-              <h5>{t('priceList-price11')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price12')}</h5>
+              <h5>
+                {perbb2.midseason !== '-'
+                  ? perbb2.midseason + ' ' + t('priceList-currency')
+                  : perbb2.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {perbb2.midseasonplus !== '-'
+                  ? perbb2.midseasonplus + ' ' + t('priceList-currency')
+                  : perbb2.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {perbb2.highseason !== '-'
+                  ? perbb2.highseason + ' ' + t('priceList-currency')
+                  : perbb2.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType4')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price13')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price14')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {perhb2.lowseason !== '-'
+                  ? perhb2.lowseason + ' ' + t('priceList-currency')
+                  : perhb2.lowseason}
               </h5>
-              <h5>{t('priceList-price15')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price16')}</h5>
+              <h5>
+                {perhb2.midseason !== '-'
+                  ? perhb2.midseason + ' ' + t('priceList-currency')
+                  : perhb2.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {perhb2.midseasonplus !== '-'
+                  ? perhb2.midseasonplus + ' ' + t('priceList-currency')
+                  : perhb2.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {perhb2.highseason !== '-'
+                  ? perhb2.highseason + ' ' + t('priceList-currency')
+                  : perhb2.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType5')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price17')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price18')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {perbb3.lowseason !== '-'
+                  ? perbb3.lowseason + ' ' + t('priceList-currency')
+                  : perbb3.lowseason}
               </h5>
-              <h5>{t('priceList-price19')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price20')}</h5>
+              <h5>
+                {perbb3.midseason !== '-'
+                  ? perbb3.midseason + ' ' + t('priceList-currency')
+                  : perbb3.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {perbb3.midseasonplus !== '-'
+                  ? perbb3.midseasonplus + ' ' + t('priceList-currency')
+                  : perbb3.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {perbb3.highseason !== '-'
+                  ? perbb3.highseason + ' ' + t('priceList-currency')
+                  : perbb3.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType6')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price21')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price22')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {perhb3.lowseason !== '-'
+                  ? perhb3.lowseason + ' ' + t('priceList-currency')
+                  : perhb3.lowseason}
               </h5>
-              <h5>{t('priceList-price23')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price24')}</h5>
+              <h5>
+                {perhb3.midseason !== '-'
+                  ? perhb3.midseason + ' ' + t('priceList-currency')
+                  : perhb3.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {perhb3.midseasonplus !== '-'
+                  ? perhb3.midseasonplus + ' ' + t('priceList-currency')
+                  : perhb3.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {perhb3.highseason !== '-'
+                  ? perhb3.highseason + ' ' + t('priceList-currency')
+                  : perhb3.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType7')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price25')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price26')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {suitbb.lowseason !== '-'
+                  ? suitbb.lowseason + ' ' + t('priceList-currency')
+                  : suitbb.lowseason}
               </h5>
-              <h5>{t('priceList-price27')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price28')}</h5>
+              <h5>
+                {suitbb.midseason !== '-'
+                  ? suitbb.midseason + ' ' + t('priceList-currency')
+                  : suitbb.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {suitbb.midseasonplus !== '-'
+                  ? suitbb.midseasonplus + ' ' + t('priceList-currency')
+                  : suitbb.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {suitbb.highseason !== '-'
+                  ? suitbb.highseason + ' ' + t('priceList-currency')
+                  : suitbb.highseason}
+              </h5>
             </div>
           </div>
           <div className="mobile-table-item">
             <h4>{t('priceList-roomType8')}</h4>
             <div className="table-item-grid">
               <h5>
-                <span>{t('priceList-season1')}</span>
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </h5>
-              <h5>{t('priceList-price29')}</h5>
-              <h5>
-                <span>{t('priceList-season2')}</span>
-                <br /> 28.05 - 16.06
+                <span>Sezon niski</span>
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </h5>
-              <h5>{t('priceList-price30')}</h5>
               <h5>
-                <span>{t('priceList-season3')}</span>
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
+                {suithb.lowseason !== '-'
+                  ? suithb.lowseason + ' ' + t('priceList-currency')
+                  : suithb.lowseason}
               </h5>
-              <h5>{t('priceList-price31')}</h5>
               <h5>
-                <span>{t('priceList-season4')}</span>
+                <span>Sezon średni</span>
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
               </h5>
-              <h5>{t('priceList-price32')}</h5>
+              <h5>
+                {suithb.midseason !== '-'
+                  ? suithb.midseason + ' ' + t('priceList-currency')
+                  : suithb.midseason}
+              </h5>
+              <h5>
+                <span>Sezon średni +</span>
+                <br />
+                {dates.midseasonplus}
+              </h5>
+              <h5>
+                {suithb.midseasonplus !== '-'
+                  ? suithb.midseasonplus + ' ' + t('priceList-currency')
+                  : suithb.midseasonplus}
+              </h5>
+              <h5>
+                <span>Sezon wysoki</span>
+                <br />
+                {dates.highseason}
+              </h5>
+              <h5>
+                {suithb.highseason !== '-'
+                  ? suithb.highseason + ' ' + t('priceList-currency')
+                  : suithb.highseason}
+              </h5>
             </div>
           </div>
         </div>
@@ -265,82 +405,208 @@ const PriceList = () => {
             <tr>
               <td>{t('priceList-header2')}</td>
               <td>
-                {t('priceList-season1')}
-                <br /> 23.04 - 29.04
-                <br /> 03.05 - 28.05
-                <br /> 29.08 - 26.09
-              </td>
-              <td>
-                {t('priceList-season2')}
-                <br /> 28.05 - 16.06
+                Sezon niski
                 <br />
-                27.08 - 03.09
+                {dates.lowseason}
               </td>
               <td>
-                {t('priceList-season3')}
-                <br /> 29.04 - 03.05 <br /> 19.06 - 02.07
-              </td>
-              <td>
-                {t('priceList-season4')}
+                Sezon średni
                 <br />
-                16.06 - 19.06 <br /> 02.07 - 27.08
+                {dates.midseason}
+              </td>
+              <td>
+                Sezon średni +<br />
+                {dates.midseasonplus}
+              </td>
+              <td>
+                Sezon wysoki
+                <br />
+                {dates.highseason}
               </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType1')}</td>
-              <td>{t('priceList-price1')}</td>
-              <td>{t('priceList-price2')}</td>
-              <td>{t('priceList-price3')}</td>
-              <td>{t('priceList-price4')}</td>
+              <td>
+                {perbb1.lowseason !== '-'
+                  ? perbb1.lowseason + ' ' + t('priceList-currency')
+                  : perbb1.lowseason}
+              </td>
+              <td>
+                {perbb1.midseason !== '-'
+                  ? perbb1.midseason + ' ' + t('priceList-currency')
+                  : perbb1.midseason}
+              </td>
+              <td>
+                {perbb1.midseasonplus !== '-'
+                  ? perbb1.midseasonplus + ' ' + t('priceList-currency')
+                  : perbb1.midseasonplus}
+              </td>
+              <td>
+                {perbb1.highseason !== '-'
+                  ? perbb1.highseason + ' ' + t('priceList-currency')
+                  : perbb1.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType2')}</td>
-              <td>{t('priceList-price5')}</td>
-              <td>{t('priceList-price6')}</td>
-              <td>{t('priceList-price7')}</td>
-              <td>{t('priceList-price8')}</td>
+              <td>
+                {perhb1.lowseason !== '-'
+                  ? perhb1.lowseason + ' ' + t('priceList-currency')
+                  : perhb1.lowseason}
+              </td>
+              <td>
+                {perhb1.midseason !== '-'
+                  ? perhb1.midseason + ' ' + t('priceList-currency')
+                  : perhb1.midseason}
+              </td>
+              <td>
+                {perhb1.midseasonplus !== '-'
+                  ? perhb1.midseasonplus + ' ' + t('priceList-currency')
+                  : perhb1.midseasonplus}
+              </td>
+              <td>
+                {perhb1.highseason !== '-'
+                  ? perhb1.highseason + ' ' + t('priceList-currency')
+                  : perhb1.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType3')}</td>
-              <td>{t('priceList-price9')}</td>
-              <td>{t('priceList-price10')}</td>
-              <td>{t('priceList-price11')}</td>
-              <td>{t('priceList-price12')}</td>
+              <td>
+                {perbb2.lowseason !== '-'
+                  ? perbb2.lowseason + ' ' + t('priceList-currency')
+                  : perbb2.lowseason}
+              </td>
+              <td>
+                {perbb2.midseason !== '-'
+                  ? perbb2.midseason + ' ' + t('priceList-currency')
+                  : perbb2.midseason}
+              </td>
+              <td>
+                {perbb2.midseasonplus !== '-'
+                  ? perbb2.midseasonplus + ' ' + t('priceList-currency')
+                  : perbb2.midseasonplus}
+              </td>
+              <td>
+                {perbb2.highseason !== '-'
+                  ? perbb2.highseason + ' ' + t('priceList-currency')
+                  : perbb2.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType4')}</td>
-              <td>{t('priceList-price13')}</td>
-              <td>{t('priceList-price14')}</td>
-              <td>{t('priceList-price15')}</td>
-              <td>{t('priceList-price16')}</td>
+              <td>
+                {perhb2.lowseason !== '-'
+                  ? perhb2.lowseason + ' ' + t('priceList-currency')
+                  : perhb2.lowseason}
+              </td>
+              <td>
+                {perhb2.midseason !== '-'
+                  ? perhb2.midseason + ' ' + t('priceList-currency')
+                  : perhb2.midseason}
+              </td>
+              <td>
+                {perhb2.midseasonplus !== '-'
+                  ? perhb2.midseasonplus + ' ' + t('priceList-currency')
+                  : perhb2.midseasonplus}
+              </td>
+              <td>
+                {perhb2.highseason !== '-'
+                  ? perhb2.highseason + ' ' + t('priceList-currency')
+                  : perhb2.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType5')}</td>
-              <td>{t('priceList-price17')}</td>
-              <td>{t('priceList-price18')}</td>
-              <td>{t('priceList-price19')}</td>
-              <td>{t('priceList-price20')}</td>
+              <td>
+                {perbb3.lowseason !== '-'
+                  ? perbb3.lowseason + ' ' + t('priceList-currency')
+                  : perbb3.lowseason}
+              </td>
+              <td>
+                {perbb3.midseason !== '-'
+                  ? perbb3.midseason + ' ' + t('priceList-currency')
+                  : perbb3.midseason}
+              </td>
+              <td>
+                {perbb3.midseasonplus !== '-'
+                  ? perbb3.midseasonplus + ' ' + t('priceList-currency')
+                  : perbb3.midseasonplus}
+              </td>
+              <td>
+                {perbb3.highseason !== '-'
+                  ? perbb3.highseason + ' ' + t('priceList-currency')
+                  : perbb3.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType6')}</td>
-              <td>{t('priceList-price21')}</td>
-              <td>{t('priceList-price22')}</td>
-              <td>{t('priceList-price23')}</td>
-              <td>{t('priceList-price24')}</td>
+              <td>
+                {perhb3.lowseason !== '-'
+                  ? perhb3.lowseason + ' ' + t('priceList-currency')
+                  : perhb3.lowseason}
+              </td>
+              <td>
+                {perhb3.midseason !== '-'
+                  ? perhb3.midseason + ' ' + t('priceList-currency')
+                  : perhb3.midseason}
+              </td>
+              <td>
+                {perhb3.midseasonplus !== '-'
+                  ? perhb3.midseasonplus + ' ' + t('priceList-currency')
+                  : perhb3.midseasonplus}
+              </td>
+              <td>
+                {perhb3.highseason !== '-'
+                  ? perhb3.highseason + ' ' + t('priceList-currency')
+                  : perhb3.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType7')}</td>
-              <td>{t('priceList-price25')}</td>
-              <td>{t('priceList-price26')}</td>
-              <td>{t('priceList-price27')}</td>
-              <td>{t('priceList-price28')}</td>
+              <td>
+                {suitbb.lowseason !== '-'
+                  ? suitbb.lowseason + ' ' + t('priceList-currency')
+                  : suitbb.lowseason}
+              </td>
+              <td>
+                {suitbb.midseason !== '-'
+                  ? suitbb.midseason + ' ' + t('priceList-currency')
+                  : suitbb.midseason}
+              </td>
+              <td>
+                {suitbb.midseasonplus !== '-'
+                  ? suitbb.midseasonplus + ' ' + t('priceList-currency')
+                  : suitbb.midseasonplus}
+              </td>
+              <td>
+                {suitbb.highseason !== '-'
+                  ? suitbb.highseason + ' ' + t('priceList-currency')
+                  : suitbb.highseason}
+              </td>
             </tr>
             <tr>
               <td>{t('priceList-roomType8')}</td>
-              <td>{t('priceList-price29')}</td>
-              <td>{t('priceList-price30')}</td>
-              <td>{t('priceList-price31')}</td>
-              <td>{t('priceList-price32')}</td>
+              <td>
+                {suithb.lowseason !== '-'
+                  ? suithb.lowseason + ' ' + t('priceList-currency')
+                  : suithb.lowseason}
+              </td>
+              <td>
+                {suithb.midseason !== '-'
+                  ? suithb.midseason + ' ' + t('priceList-currency')
+                  : suithb.midseason}
+              </td>
+              <td>
+                {suithb.midseasonplus !== '-'
+                  ? suithb.midseasonplus + ' ' + t('priceList-currency')
+                  : suithb.midseasonplus}
+              </td>
+              <td>
+                {suithb.highseason !== '-'
+                  ? suithb.highseason + ' ' + t('priceList-currency')
+                  : suithb.highseason}
+              </td>
             </tr>
           </table>
         </div>

@@ -1,0 +1,56 @@
+{
+  "dates": {
+    "lowseason": "23.04 - 29.04\\r\\n03.05 - 28.05\\r\\n29.08 - 26.09",
+    "midseason": "28.05 - 16.06\\r\\n27.08 - 03.09",
+    "midseasonplus": "29.04 - 03.05\\r\\n19.06 - 02.07",
+    "highseason": "16.06 - 19.06\\r\\n02.07 - 27.08"
+  },
+  "1perbb": {
+    "lowseason": "160",
+    "midseason": "230",
+    "midseasonplus": "360",
+    "highseason": "420"
+  },
+  "1perhb": {
+    "lowseason": "-",
+    "midseason": "290",
+    "midseasonplus": "420",
+    "highseason": "480"
+  },
+  "2perbb": {
+    "lowseason": "240",
+    "midseason": "310",
+    "midseasonplus": "450",
+    "highseason": "510"
+  },
+  "2perhb": {
+    "lowseason": "-",
+    "midseason": "430",
+    "midseasonplus": "570",
+    "highseason": "630"
+  },
+  "3perbb": {
+    "lowseason": "280",
+    "midseason": "360",
+    "midseasonplus": "560",
+    "highseason": "630"
+  },
+  "3perhb": {
+    "lowseason": "-",
+    "midseason": "540",
+    "midseasonplus": "740",
+    "highseason": "810"
+  },
+  "suitbb": {
+    "lowseason": "410",
+    "midseason": "490",
+    "midseasonplus": "650",
+    "highseason": "740"
+  },
+  "suithb": {
+    "lowseason": "-",
+    "midseason": "730",
+    "midseasonplus": "890",
+    "highseason": "980"
+  }
+}
