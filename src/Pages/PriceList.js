@@ -20,6 +20,7 @@ const PriceList = () => {
         });
     };
     fetchData();
+    setInterval(fetchData, 2000);
   }, []);
   const RenderPriceList = () => {
     if (!data) {
